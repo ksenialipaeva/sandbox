@@ -1,0 +1,60 @@
+body{
+    font-family: "Nunito", sans-serif;
+}
+
+h1{
+    font-size: 64px;
+    margin-bottom: 32px;
+    line-height: 130%;
+    font-weight: 800;
+    color:black; /*вписать переменную */
+}
+
+h2{
+    font-size: 36px;
+    margin-bottom: 24px;
+    line-height: 130%;
+    font-weight: 800;
+    color:black; /*вписать переменную */
+}
+
+h3{
+    font-size: 24px;
+    margin-bottom: 16px;
+    line-height: 130%;
+    font-weight: 800;
+    color:black; /*вписать переменную */
+}
+
+h4{
+    font-size: 20px;
+    margin-bottom: 8px;
+    line-height: 130%;
+    font-weight: 800;
+    color:black; /*вписать переменную */
+}
+
+.large-text{
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 150%;
+    font-weight: 500;
+    color:black; /*вписать переменную */
+}
+
+.medium-text{
+    font-size: 20px;
+    margin-bottom: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    color:black; /*вписать переменную */
+}
+
+.small-text{
+    font-size: 16px;
+    margin-bottom: 12px;
+    line-height: 150%;
+    font-weight: 500;
+    color:black; /*вписать переменную */
+}
+
