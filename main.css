@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 :root {
     /* Color styles */
 --main--light: rgba(246, 250, 251, 1);
@@ -62,7 +65,7 @@
 --link--visited: rgba(110, 35, 138, 1);
 
 /* Text-size styles */
---caption: 8px;
+/*--caption: 8px;
 --code: 16px;
 --title--h1: 64px;
 --title--h2: 36px;
@@ -70,7 +73,19 @@
 --title--h4: 20px;
 --body--large: 24px;
 --body--medium: 20px;
---body--small: 16px;
+--body--small: 16px;*/
+
+/* Text-size styles */
+/* base size: body--small (16px) */
+--caption: 0.75rem;
+--title--h1: 4rem;
+--title--h2: 2.25rem;
+--title--h3: 1.5rem;
+--title--h4: 1.25rem;
+--body--large: 1.5rem;
+--body--medium: 1.25rem;
+--body--small: 1rem;
+
 
 /* Grid size */
 --grid-1: 100px;
@@ -83,70 +98,63 @@
 --grid-side-menu: 200px;
 
 }
+/*||| Шрифты*/
+body {font-family: "Nunito", sans-serif;}
+code {font-family: "Roboto Mono", monospace;}
+
 
 /*||| Цвета типографики*/
-body 
-{
-    background-color: var(--main--light);
-}
+body {background-color: var(--main--light);}
 
-h1, h2, h3, h4 
-{
-    color: var(--brand--brand--40-d);
-}
+h1, h2, h3, h4 {color: var(--brand--brand--40-d);}
 
-a 
-{
-    color: var(--link--link);
-}
-a:hover 
-{
-    color: var(--link--hover);
-}
-a:active 
-{
-    color: var(--link--active);
-}
-a:visited 
-{
-    color: var(--link--visited);
-}
+a {color: var(--link--link);}
+a:hover {color: var(--link--hover);}
+a:active {color: var(--link--active);}
+a:visited {color: var(--link--visited);}
 
-/*||| Размеры типографики*/
-h1
-{
+/*||| Размеры и отступы типографики*/
+h1 {
     font-size: var(--title--h1);
+    margin-bottom: var(--title--h1);
 }
-h2
-{
+h2 {
     font-size: var(--title--h2);
+    margin-bottom: var(--title--h2);
 }
-h3
-{
+h3 {
     font-size: var(--title--h3);
+    margin-bottom: var(--title--h2);
 }
-h4
-{
+h4{
     font-size: var(--title--h4);
+    margin-bottom: var(--title--h2);
 }
-p.large,a.large,.side-menu>a
-{
+
+h1, h2, h3, h4 {line-height: 130%;}
+
+p.large-text,a.large-text,.side-menu>a {
+    font-size: var(--body--large);
+    margin-bottom: var(--body--large);
+}
+p.medium-text,a.medium-text, code {
     font-size: var(--body--medium);
+    margin-bottom: var(--body--medium);
 }
-p.medium,a.medium
-{
-    font-size: var(--body--medium);
+p.small-text,a.small-text {
+    font-size: var(--body--small);
+    margin-bottom: var(--body--small);
 }
-p.small,a.small
-{
-    font-size: var(--body--medium);
-}
+
+p,a {line-height: 150%;}
 
 /*||| Декорация типографики*/
-.bold, .side-menu>a, h1, h2, h3, h4  {
+b, strong, .side-menu>a, h1, h2, h3, h4  {
     font-weight: 800;
 }
-.side-menu>a 
-{
+p, a, code {
+    font-weight: 500;
+}
+.side-menu>a {
     text-decoration: underline;
 }
