@@ -98,13 +98,15 @@
 --grid-side-menu: 200px;
 
 }
+
+body {background-color: var(--main--light);} 
+
 /*||| Шрифты*/
 body {font-family: "Nunito", sans-serif;}
 code {font-family: "Roboto Mono", monospace;}
 
 
 /*||| Цвета типографики*/
-body {background-color: var(--main--light);}
 
 h1, h2, h3, h4 {color: var(--brand--brand--40-d);}
 
@@ -124,11 +126,11 @@ h2 {
 }
 h3 {
     font-size: var(--title--h3);
-    margin-bottom: var(--title--h2);
+    margin-bottom: var(--title--h3);
 }
 h4{
     font-size: var(--title--h4);
-    margin-bottom: var(--title--h2);
+    margin-bottom: var(--title--h4);
 }
 
 h1, h2, h3, h4 {line-height: 130%;}
