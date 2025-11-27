@@ -110,6 +110,8 @@ code {font-family: "Roboto Mono", monospace;}
 
 h1, h2, h3, h4 {color: var(--brand--brand--40-d);}
 
+p {color: var(--main--dark);}
+
 a {color: var(--link--link);}
 a:hover {color: var(--link--hover);}
 a:active {color: var(--link--active);}
