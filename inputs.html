@@ -40,37 +40,104 @@
 <p class="medium-text">Заблокированное поле используется, когда в&nbsp;данный момент невозможно ввести информацию.</p>
 <p class="medium-text">При этом в&nbsp;описании обязательно должна быть указана причина блокировки поля или способ его разблокировки. Как и&nbsp;другие заблокированные элементы, оно менее контрастно.</p>
 <h4>Ошибка</h4>
-<!-- Картинка-->
+<img src="images/inputs/mistake.png">
 <p class="medium-text">Ошибка используется в&nbsp;случае, когда введенные данные не&nbsp;соответствуют требованиям к&nbsp;ним.</p>
 <p class="medium-text">В&nbsp;случае ошибки обязательно заполнение описания ошибки, чтобы ясно было, как её&nbsp;исправлять. Рядом с&nbsp;описанием обязательно использовать иконку для того, чтобы состояние ошибки было показано не&nbsp;только цветом.</p>
 <p class="medium-text">Исключение составляют неверно введенные логин и&nbsp;пароль: даже если есть ошибка форматирования, необходимо выводить ошибку &laquo;Неверный логин или пароль&raquo; (дословно) для избежания компрометирования личных данных.</p>
 <h4>Предупреждение</h4>
-<!-- Картинка-->
+<img src="images/inputs/warning.png">
 <p class="medium-text">Предупреждение&nbsp;&mdash; это совет. Оно используется в&nbsp;случае, когда введенные пользователем данные корректны, но&nbsp;исправление может улучшить опыт пользователя.</p>
 <p class="medium-text">В&nbsp;случае предупреждения также обязательно заполнение описания предупреждения, желательно так, чтобы ясно было, как его исправлять. Рядом с&nbsp;описанием обязательно использовать иконку для того, чтобы состояние ошибки было показано не&nbsp;только цветом.</p>
 <h4>Успех</h4>
-<!-- Картинка-->
+<img src="images/inputs/success.png">
 <p class="medium-text">Успех используется в&nbsp;случае заполнения полей со&nbsp;сложными правилами для того, чтобы показать, что все правила соблюдены.</p>
 <p class="medium-text">Верный логин и&nbsp;пароль (в&nbsp;процессе входа в&nbsp;уже существующий аккаунт) никогда не&nbsp;должны иметь состояние Успех. Совпадающие пароли или надежный пароль во&nbsp;время регистрации могут иметь состояние Успех.</p>
 <h3>Стиль</h3>
 <!-- Это идет в одну строку-->
 <h4>Контур</h4>
-<!-- Картинка-->
+<img src="images/inputs/outline.png">
 <p class="medium-text">Привычно, граница четко определяет поле.</p>
 <h4>Подчеркивание</h4>
-<!-- Картинка-->
+<img src="images/inputs/underline.png">
 <p class="medium-text">Визуально легче и&nbsp;компактнее.</p>
 <!-- Конец этого блока-->
 <h3>Какой стиль выбрать?</h3>
 <p class="medium-text">Руководствуйтесь эстетическими соображениями и&nbsp;количеством полей в&nbsp;форме.</p>
 <!-- Это идет в одну строку-->
-<!-- Картинка-->
+<img src="images/inputs/underline_form.png">
 <p class="medium-text"><strong>Полей 5&nbsp;и&nbsp;больше? </strong>Лучше использовать <strong>подчеркнутые поля</strong>, они визуально более легкие.</p>
-<!-- Картинка-->
+<img src="images/inputs/outline_form.png">
 <p class="medium-text"><strong>Полей меньше 5?</strong> Лучше использовать <strong>контурные поля</strong>, они более заметные и&nbsp;привычные..</p>
 <!-- Конец этого блока-->
 <p class="medium-text">Можно использовать <strong>оба вида стилей в&nbsp;одной форме</strong>, но&nbsp;тогда необходим блоковый подход: поля двух разных стилей не&nbsp;должны быть перемешаны, но&nbsp;использованы каждый в&nbsp;своих ясно отделенных блоках.</p>
-<!-- Картинка-->
+    <article class="example-container">
+        <article class="example yes grid3">
+            <div>
+                <img src="images/example_yes.svg">
+                <p class="heading"><strong></strong>. Смысловые блоки</p>
+            </div>
+            <img src="images/inputs/form_yes.png">
+        </article>
+        <article class="example no grid3">
+            <div>
+                <img src="images/example_no.svg">
+                <p class="heading"><strong></strong>. Чередование</p>
+            </div>
+            <img src="images/inputs/form_no.png">
+        </article>
+    </article>
+<h3>Ширина контейнера</h3>
+<p class="medium-text">Ширина подбирается вручную. При этом рекомендуется учитывать в&nbsp;порядке приоритета:</p>
+<ol>
+    <li>длину названия формы,</li>
+    <li>длину описания,</li>
+    <li>вероятную максимальную длину содержания,</li>
+    <li>согласованность (равность) с&nbsp;другими полями формы,</li>
+    <li>согласованность с&nbsp;сеткой.</li>
+</ol>
+<h3>Содержание</h3>
+<h4>Плейсхолдер</h4>
+<img src="images/inputs/placeholder.png">
+<p class="medium-text">Неконтрастный текст с&nbsp;примером заполнения поля. Используется для полей, в&nbsp;которых могут возникнуть сомнения в&nbsp;заполнении после прочтения названия.</p>
+<!-- Это идет в одну строку-->
+<ol>
+<img src="images/inputs/email.png">
+<li>Всегда содержит пример заполнения</li>
+<img src="images/inputs/name.png">
+<li>Всегда в&nbsp;одну строку и&nbsp;никогда не&nbsp;сокращается.</li>
+<img src="images/inputs/password.png">
+<li>Никогда не&nbsp;используется для полей пароля.</li>
+</ol>
+<!-- Конец этого блока-->
+<p class="medium-text">Пример должен явно отличаться от&nbsp;автозаполнения, которое возможно в&nbsp;поле.</p>
+    <article class="example-container">
+        <article class="example yes grid3">
+            <div>
+                <img src="images/example_yes.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <img src="images/inputs/phone.png">
+            <p class="explanation">Цифры или буквы в&nbsp;порядке увеличения от&nbsp;1&nbsp;или&nbsp;A</p>
+        </article>
+        <article class="example yes grid3">
+            <div>
+                <img src="images/example_yes.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <img src="images/inputs/name2.png">
+            <p class="explanation">Общепринятые названия (экземплификанты)</p>
+        </article>
+        <article class="example no grid3">
+            <div>
+                <img src="images/example_no.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <img src="images/inputs/name3.png">
+            <p class="explanation">Не&nbsp;соответствует принятому стилю речи.</p>
+        </article>
+    </article>
+
+
 <p class="large-text"></p>
 <p class="medium-text"></p>
 </body>
