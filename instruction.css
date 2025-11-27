@@ -106,6 +106,10 @@
 --radius-large: 1.25rem; /*20px*/
 }
 
+.advise, .example-container, .illustration {
+    margin-bottom: 40px;
+}
+
 .grid3 {    width: var(--grid-3);}
 .grid2 {    width: var(--grid-2);}
 .grid6 {    width: var(--grid-6);}
@@ -183,16 +187,20 @@
     width:var(--grid-6);
     border-radius: var(--radius-large);
     box-sizing: border-box;
-    padding: 0  var(--indent-small) 20px var(--indent-small);
+    padding: 0  var(--indent-small) 8px var(--indent-small);
 
 }
 .advise p {
     color:var(--main--light);
+    font-size: var(--body--medium);
+    margin-bottom: var(--body--small);
+
+    margin-top: 0;
 }
-.advise div p::before {
+.advise div p:first-of-type:before {
     content: "Совет";
     font-weight: 800;
     color: var(--brand--accent-3);
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 12px;
 }

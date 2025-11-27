@@ -120,34 +120,34 @@ a:visited {color: var(--link--visited);}
 /*||| Размеры и отступы типографики*/
 h1 {
     font-size: var(--title--h1);
-    margin-bottom: var(--title--h1);
+    margin-bottom: var(--title--h2);
 }
 h2 {
     font-size: var(--title--h2);
-    margin-bottom: var(--title--h2);
+    margin-bottom: var(--title--h3);
 }
 h3 {
     font-size: var(--title--h3);
-    margin-bottom: var(--title--h3);
+    margin-bottom: var(--title--h4);
 }
 h4{
     font-size: var(--title--h4);
-    margin-bottom: var(--title--h4);
+    margin-bottom: var(--body--small);
 }
 
 h1, h2, h3, h4 {line-height: 130%;}
 
 p.large-text,a.large-text,.side-menu>a {
     font-size: var(--body--large);
-    margin-bottom: var(--body--large);
+    margin-bottom: var(--body--medium);
 }
 p.medium-text,a.medium-text, code {
     font-size: var(--body--medium);
-    margin-bottom: var(--body--medium);
+    margin-bottom: var(--body--small);
 }
 p.small-text,a.small-text {
     font-size: var(--body--small);
-    margin-bottom: var(--body--small);
+    margin-bottom: var(--caption);
 }
 
 p,a {line-height: 150%;}
