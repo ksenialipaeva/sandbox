@@ -5,6 +5,7 @@
     <meta charset="utf-8"/>
     <title>Цвета</title>
     <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="instruction.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 
@@ -16,11 +17,45 @@
 <h3>Контрастность</h3>
 <p class="medium-text">Контрастность сочетания цветов должна проверяться с&nbsp;помощью стандартов APCA, с&nbsp;учетом размера и&nbsp;начертания шрифта. Нормы показателя&nbsp;Lc совпадают с&nbsp;приведенными в&nbsp;калькуляторе. Фон для подложек и&nbsp;плашек не&nbsp;обязан проходить проверку контрастности, если при удалении фона структура страницы все еще ясна.</p>
 <!-- Ссылка на инструкцию-->
-<!-- Пример ДА/НЕТ-->
+    <article class="example-container">
+        <article class="example yes grid3">
+            <div>
+                <img src="images/example_yes.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <p>Текст написан темно-серым цветом.</p>
+            <p>Lc=80, этому цвету и&nbsp;начертанию необходим кегль минимум 16px.</p>
+        </article>
+        <article class="example no grid3">
+            <div>
+                <img src="images/example_no.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <p id="grey-mistake">Текст написан светло-серым цветом</p>
+            <p>Lc=27, этому цвету и&nbsp;начертанию необходим кегль минимум 83px.</p>
+        </article>
+    </article>
 <h3>Отличимость</h3>
 <p class="medium-text">Необходимо учитывать отличимость оттенков для близких в&nbsp;пространстве элементов. Советуем руководствоваться здравым смыслом&nbsp;и, при необходимости, величиной Delta&nbsp;E, которая должна для комфортной отличимости быть больше&nbsp;10.</p>
 <!-- Ссылка на инструкцию-->
-<!-- Пример ДА/НЕТ-->
+    <article class="example-container">
+        <article class="example yes grid3">
+            <div>
+                <img src="images/example_yes.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <img src="images/colors/deltae_no.png">
+            <p class="explanation">Delta E между всеми тремя используемыми цветами больше 10.</p>
+        </article>
+        <article class="example no grid3">
+            <div>
+                <img src="images/example_no.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <img src="images/colors/deltae_no.png">
+            <p class="explanation">Delta E цвета placeholder и стрелки равна 7. Создается “визуальный дребезг”.</p>
+        </article>
+    </article>
 <p class="medium-text">Однако стоит полнее исследовать определение отличимости оттенков, так как приведенная метрика является нечувствительной к&nbsp;фону, таким образом не&nbsp;учитывая относительность цвета (color relativity, J.&nbsp;Albers), а&nbsp;также к&nbsp;площади цвета.</p>
 <h3>Редуктивный подход</h3>
 <p class="medium-text">Ниже предоставлена цветовая палитра, которая может обеспечивать визуальное отображение сложной системы. По&nbsp;возможности необходимо использовать цвета, которые ниже обозначены как базовые (B).</p>
@@ -53,7 +88,23 @@
     <li>light версии для фонов;</li>
     <li>dark версии для текста.</li>
 </ul>
-<!-- Пример ДА/НЕТ-->
+    <article class="example-container">
+        <article class="example yes grid3">
+            <div>
+                <img src="images/example_yes.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <p class="warning-text">Слишком короткий пароль. Длина пароля&nbsp;&mdash; 6&nbsp;символов или больше.</p>
+        </article>
+        <article class="example no grid3">
+            <div>
+                <img src="images/example_no.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <p class="warning-text">Товара нет в&nbsp;наличии.</p>
+            <p class="explanation">Это сообщение не&nbsp;является ошибкой и&nbsp;не&nbsp;должно выделяться красным цветом, так как пользователь не&nbsp;может повлиять на&nbsp;наличие товара.</p>
+        </article>
+    </article>
 <h3>Успех</h3>
 <p class="medium-text">Чтобы показать успешность действия или пример успешного действия. Например: форма успешно заполнена.</p>
 <!-- Строчка цветов-->
@@ -75,8 +126,51 @@
 <h3>Правила создания</h3>
 <p class="medium-text">Должны содержать ровно два цвета, один на&nbsp;позиции&nbsp;0%, второй на&nbsp;позиции 100%. Цвета могут быть взяты из&nbsp;семейств Grey, Brand, Accent&nbsp;1, Accent&nbsp;2, Accent&nbsp;3. Если один из&nbsp;цветов градиента из&nbsp;семейства Grey, то&nbsp;второй должен быть также оттуда, а&nbsp;остальные семейства можно сочетать друг с&nbsp;другом. Правило сочетания: два цвета должны принадлежать одной или соседним ступеням (соседними считаются, например, ступени 15L и&nbsp;50L).</p>
 <h3>Примеры</h3>
-<!-- Градиенты-->
- <!-- Блок кода-->
+    <article class="example-container">
+        <article class="example yes grid3">
+            <div>
+                <img src="images/example_yes.svg">
+                <p class="heading"><strong></strong>=</p>
+            </div>
+            <img src="images/colors/gradient1.png">
+        </article>
+        <article class="example no grid3">
+            <div>
+                <img src="images/example_no.svg">
+                <p class="heading"><strong></strong>. Смещены опорные точки</p>
+            </div>
+            <img src="images/colors/gradient2.png">
+        </article>
+        <article class="example yes grid3">
+            <div>
+                <img src="images/example_yes.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <img src="images/colors/gradient3.png">
+        </article>
+        <article class="example no grid3">
+            <div>
+                <img src="images/example_no.svg">
+                <p class="heading"><strong></strong>. Больше двух цветов</p>
+            </div>
+            <img src="images/colors/gradient4.png">
+        </article>
+        <article class="example yes grid3">
+            <div>
+                <img src="images/example_yes.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <img src="images/colors/gradient5.png">
+        </article>
+        <article class="example no grid3">
+            <div>
+                <img src="images/example_no.svg">
+                <p class="heading"><strong></strong>. Цветное с серым</p>
+            </div>
+            <img src="images/colors/gradient6.png">
+        </article>
+    </article>
+<!-- Блок кода-->
 <p class="medium-text"></p>
 </body>
 </html>
