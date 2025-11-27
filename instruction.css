@@ -98,7 +98,7 @@
 --grid-side-menu: 200px;
 
 /* Отступы */
---indent-extrasmall: 0.5rem; /*12px*/
+--indent-extrasmall: 0.5rem; /*8px*/
 --indent-small: 0.75rem; /*12px*/
 --indent-medium: 1.25rem; /*20px*/
 
@@ -106,19 +106,19 @@
 --radius-large: 1.25rem; /*20px*/
 }
 
-.grid3 {    width: var(--grid-3);}
-.grid2 {    width: var(--grid-2);}
-.grid6 {    width: var(--grid-6);}
+.grid3 {    width: calc(var(--grid-3) - var(--indent-small) - var(--indent-small) );}
+.grid2 {    width: calc(var(--grid-2) - var(--indent-small) - var(--indent-small) );}
+.grid6 {    width: calc(var(--grid-6) - var(--indent-small) - var(--indent-small) );}
 
-.fit-height {
-    height: 100%;
-}
+/* ||| Пример Да Нет*/
 
 .example-container {
     display: flex;
     flex-direction: row;
     gap: var(--grid-gap);
     row-gap: var(--grid-gap);
+    max-width: 800px;
+    flex-wrap: wrap;
 }
 
 .example {
@@ -130,12 +130,16 @@
     display: flex;
     flex-direction: row;
     gap: var(--indent-extrasmall);
-    margin-top: 20px;
+    align-items:flex-start;
 }
-.example .heading{    font-size: var(--title--h4); line-height: 0;}
+.example .heading {    
+    font-size: var(--title--h4); 
+}
+.example div img {
+    margin-top: var(--indent-medium);
+}
 .explanation {    color: var(--grey--50);}
-.example>img {    width:100%;}
-.example code {padding-top: 20px;}
+.example>img {    width:100%; }
 
 .example.yes {    border-color: var(--feedback--success--light);}
 .example.no {    border-color: var(--feedback--danger--light);}
@@ -149,3 +153,17 @@
 .example.yes .heading {    color: var(--feedback--success--dark);}
 .example.no .heading {    color: var(--feedback--danger--dark);}
 .example.acceptable .heading {    color: var(--feedback--warning--dark);}
+
+
+#grey-mistake {
+    color: var(--grey--20);
+}
+
+.warning-text {color: var(--feedback--danger--dark)}
+
+/* ||| Совет*/
+.advise {
+    display: flex;
+    flex-direction: row;
+    background-color: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);;
+}
