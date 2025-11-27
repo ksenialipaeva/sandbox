@@ -106,9 +106,9 @@
 --radius-large: 1.25rem; /*20px*/
 }
 
-.grid3 {    width: calc(var(--grid-3) - var(--indent-small) - var(--indent-small) );}
-.grid2 {    width: calc(var(--grid-2) - var(--indent-small) - var(--indent-small) );}
-.grid6 {    width: calc(var(--grid-6) - var(--indent-small) - var(--indent-small) );}
+.grid3 {    width: var(--grid-3);}
+.grid2 {    width: var(--grid-2);}
+.grid6 {    width: var(--grid-6);}
 
 /* ||| Пример Да Нет*/
 
@@ -117,20 +117,22 @@
     flex-direction: row;
     gap: var(--grid-gap);
     row-gap: var(--grid-gap);
-    max-width: 800px;
+    max-width: var(--grid-6);
     flex-wrap: wrap;
 }
 
 .example {
+    box-sizing: border-box;
     border: 2px solid;
     border-radius: var(--radius-large);
-    padding: var(--indent-small) var(--indent-medium);
+    padding: 0 var(--indent-small);
 }
 .example div {
     display: flex;
     flex-direction: row;
     gap: var(--indent-extrasmall);
     align-items:flex-start;
+    background-color: ;
 }
 .example .heading {    
     font-size: var(--title--h4); 
@@ -165,5 +167,5 @@
 .advise {
     display: flex;
     flex-direction: row;
-    background-color: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);;
+    background-color: linear-gradient(0.25turn, var(--grey--90),var(--grey--90));;
 }
