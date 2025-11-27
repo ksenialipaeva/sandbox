@@ -166,3 +166,35 @@ p, a, code {
 main>img {
     width: 50%;
 }
+
+aside{
+    background-color: var(--brand--accent--2-5-l);
+    width: 300px;
+}
+
+nav > ul{
+    padding-inline-start: 24px;
+}
+
+.side-menu-heading{
+    list-style: none;
+    color: var(--brand--brand);
+    font-size: var(--title--h4);
+    font-weight: 800;
+    padding-top: var(--sidemenu);
+    padding-bottom: var(--sidemenu);
+}
+
+.side-menu-element{
+    list-style: none;
+    color: var(--main--dark);
+    font-size: var(--body--large);
+    font-weight: 500;
+    padding-top: var(--sidemenu);
+    padding-bottom: var(--sidemenu);
+}
+
+.side-menu-element > a{
+    text-decoration: none;
+    color: var(--main--dark);
+}
