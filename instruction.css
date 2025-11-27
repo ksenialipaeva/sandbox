@@ -125,14 +125,14 @@
     box-sizing: border-box;
     border: 2px solid;
     border-radius: var(--radius-large);
-    padding: 0 var(--indent-small);
+    padding: 0 20px var(--indent-small) var(--indent-small);
 }
 .example div {
     display: flex;
     flex-direction: row;
     gap: var(--indent-extrasmall);
     align-items:flex-start;
-    background-color: ;
+    height:60px;
 }
 .example .heading {    
     font-size: var(--title--h4); 
@@ -142,6 +142,10 @@
 }
 .explanation {    color: var(--grey--50);}
 .example>img {    width:100%; }
+.example p:not(.heading) {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 .example.yes {    border-color: var(--feedback--success--light);}
 .example.no {    border-color: var(--feedback--danger--light);}
@@ -167,5 +171,21 @@
 .advise {
     display: flex;
     flex-direction: row;
-    background-color: linear-gradient(0.25turn, var(--grey--90),var(--grey--90));;
+    background: linear-gradient(0.25turn, var(--grey--90),var(--grey--70));
+    gap:var(--indent-small);
+    width:var(--grid-6);
+    border-radius: var(--radius-large);
+    box-sizing: border-box;
+    padding: 0 20px var(--indent-small) var(--indent-small);
+
+}
+.advise p {
+    color:var(--main--light);
+}
+.advise div p::before {
+    content: "Совет";
+    font-weight: 800;
+    color: var(--brand--accent-3);
+    display: block;
+    margin-bottom: 4px;
 }
