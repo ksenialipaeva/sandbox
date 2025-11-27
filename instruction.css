@@ -125,17 +125,18 @@
     box-sizing: border-box;
     border: 2px solid;
     border-radius: var(--radius-large);
-    padding: 0 20px var(--indent-small) var(--indent-small);
+    padding: 0  var(--indent-small) 20px var(--indent-small);
 }
 .example div {
     display: flex;
     flex-direction: row;
     gap: var(--indent-extrasmall);
     align-items:flex-start;
-    height:60px;
+
 }
 .example .heading {    
-    font-size: var(--title--h4); 
+    font-size: var(--title--h4);
+    margin-bottom: 8px;
 }
 .example div img {
     margin-top: var(--indent-medium);
@@ -165,7 +166,13 @@
     color: var(--grey--20);
 }
 
-.warning-text {color: var(--feedback--danger--dark)}
+.warning-text {
+    color: var(--feedback--danger--dark);
+}
+
+.warning-text, #grey-mistake, .explanation, li {
+    font-size: var(--body--medium);
+}
 
 /* ||| Совет*/
 .advise {
@@ -176,7 +183,7 @@
     width:var(--grid-6);
     border-radius: var(--radius-large);
     box-sizing: border-box;
-    padding: 0 20px var(--indent-small) var(--indent-small);
+    padding: 0  var(--indent-small) 20px var(--indent-small);
 
 }
 .advise p {
