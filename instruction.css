@@ -138,15 +138,12 @@
 
 .example.yes {    border-color: var(--feedback--success--light);}
 .example.no {    border-color: var(--feedback--danger--light);}
-.example.yes .heading ::before {
-    content: "Да";    
-}
-.example.no .heading ::before {
-    content: "Нет";
-}
-.example.yes .heading {
-    color: var(--feedback--success--dark);
-}
-.example.no .heading {
-    color: var(--feedback--danger--dark);
-}
+.example.acceptable {    border-color: var(--feedback--warning--light);}
+
+.example.yes .heading ::before {    content: "Да";    }
+.example.no .heading ::before {    content: "Нет";}
+.example.acceptable .heading ::before {    content: "Допустимо";}
+
+.example.yes .heading {    color: var(--feedback--success--dark);}
+.example.no .heading {    color: var(--feedback--danger--dark);}
+.example.acceptable .heading {    color: var(--feedback--warning--dark);}
