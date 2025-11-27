@@ -5,6 +5,7 @@
     <meta charset="utf-8"/>
     <title>Строки ввода</title>
     <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="instruction.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 
@@ -15,12 +16,27 @@
 <h2>Спецификация</h2>
 <h3>Обратная связь</h3>
 <p class="medium-text">В&nbsp;оформлении полей обратной связи используются эмоционально значимые цвета. Такие поля должны использоваться только в&nbsp;случае информационной необходимости и&nbsp;никогда для получения выгоды системой в&nbsp;ущерб интересам пользователя.</p>
-<!-- Пример ДА/НЕТ-->
+    <article class="example-container">
+        <article class="example yes grid3">
+            <div>
+                <img src="images/example_yes.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <img src="images/inputs/feedback_yes.png">
+        </article>
+        <article class="example no grid3">
+            <div>
+                <img src="images/example_no.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <img src="images/inputs/feedback_no.png">
+        </article>
+    </article>
 <h4>Нормальное</h4>
-<!-- Картинка-->
+<img src="images/inputs/normal.png">
 <p class="medium-text">Нормальное состояние&nbsp;&mdash; это поле без обратной связи.</p>
 <h4>Заблокированное</h4>
-<!-- Картинка-->
+<img src="images/inputs/blocked.png">
 <p class="medium-text">Заблокированное поле используется, когда в&nbsp;данный момент невозможно ввести информацию.</p>
 <p class="medium-text">При этом в&nbsp;описании обязательно должна быть указана причина блокировки поля или способ его разблокировки. Как и&nbsp;другие заблокированные элементы, оно менее контрастно.</p>
 <h4>Ошибка</h4>
