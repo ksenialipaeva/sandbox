@@ -142,7 +142,7 @@
 }
 .explanation {    color: var(--grey--50);}
 .example>img {    width:100%; }
-.example p.medium-text {
+.example p:not(.heading) {
     margin-top: 0;
     margin-bottom: 0;
 }
