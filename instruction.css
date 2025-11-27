@@ -171,5 +171,21 @@
 .advise {
     display: flex;
     flex-direction: row;
-    background-color: linear-gradient(0.25turn, var(--grey--90),var(--grey--90));;
+    background: linear-gradient(0.25turn, var(--grey--90),var(--grey--70));
+    gap:var(--indent-small);
+    width:var(--grid-6);
+    border-radius: var(--radius-large);
+    box-sizing: border-box;
+    padding: 0 20px var(--indent-small) var(--indent-small);
+
+}
+.advise p {
+    color:var(--main--light);
+}
+.advise div p::before {
+    content: "Совет";
+    font-weight: 800;
+    color: var(--brand--accent-3);
+    display: block;
+    margin-bottom: 4px;
 }
