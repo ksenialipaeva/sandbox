@@ -5,6 +5,7 @@
     <meta charset="utf-8"/>
     <title>Типографика</title>
     <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="instruction.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 
@@ -26,7 +27,22 @@
 <p class="medium-text">Тег разбиения &lt;br&gt; может быть использован только в&nbsp;эстетических целях, но&nbsp;должен быть использован как можно реже, при любой возможности заменяясь системой семантических тегов и&nbsp;неразрывных пробелов.</p>
 <h3>Верхний регистр</h3>
 <p class="medium-text">Написание текста верхним регистром запрещено, кроме случаев аббревиатур и&nbsp;других случаев, предусмотренных правилами русского языка.</p>
-<!-- Пример ДА/НЕТ-->
+    <article class="example-container">
+        <article class="example yes grid3">
+            <div>
+                <img src="images/example_yes.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <p>Игра создана при участии ГБОУ СОШ &#8470;&nbsp;13</p>
+        </article>
+        <article class="example no grid3">
+            <div>
+                <img src="images/example_no.svg">
+                <p class="heading"><strong></strong></p>
+            </div>
+            <p>ЧТОБЫ ВОЙТИ В&nbsp;ИГРУ, НАЖМИТЕ НА&nbsp;КНОПКУ НИЖЕ</p>
+        </article>
+    </article>
 <h3>Редактирование текста</h3>
 <p class="medium-text">При возникновении сомнений принимайте решение, согласующееся с&nbsp;главными принципами дизайн-системы, с&nbsp;учётом приоритета их&nbsp;порядка, а&nbsp;также сверьтесь с&nbsp;работой Ричарда Пулина, &laquo;Шрифт&raquo;.</p>
 <p class="medium-text">Перед загрузкой текста на&nbsp;сайт советуем использовать инструмент Главред.</p>
@@ -40,7 +56,22 @@
 <p class="medium-text">Иерархия заголовков должна быть последовательной и&nbsp;руководствоваться только структурными, а&nbsp;не&nbsp;эстетическими соображениями. То&nbsp;есть перед заголовка номер&nbsp;N обязательно должен присутствовать заголовок номер N-1. В&nbsp;случае, когда это не&nbsp;отвечает эстетическим задачам, необходимо пересмотреть структуру или, в&nbsp;крайнем случае, при корректной структуре настроить особые стили отображения.</p>
 <h3>Выбор слов</h3>
 <p class="medium-text">Заголовки отвечают на&nbsp;вопрос &laquo;О&nbsp;чём эта страница?&raquo;, потому обычно основаны на&nbsp;существительных, а&nbsp;не&nbsp;глаголах. Они должны быть настолько короткими, насколько возможно, при этом сохраняя информационную независимость от&nbsp;других блоков.</p>
-<!-- Пример ДА/НЕТ-->
+    <article class="example-container">
+        <article class="example yes grid3">
+            <div>
+                <img src="images/example_yes.svg">
+                <p class="heading"><strong></strong>. Кратко и ясно</p>
+            </div>
+            <p><code>&lt;h1&gt; 50 уникальных специальностей &lt;/h1&gt;</code></p>
+        </article>
+        <article class="example no grid3">
+            <div>
+                <img src="images/example_no.svg">
+                <p class="heading"><strong></strong>. Неинформативно</p>
+            </div>
+            <p><code>&lt;h1&gt; 50 &lt;/h1&gt; &lt;p&gt; уникальных специальностей &lt;/p&gt; </code></p>
+            </article>
+        </article>
 <!-- Совет-->
 <!-- Таблица с заголовками -->
 <!-- Блок кода -->
@@ -53,14 +84,58 @@
 <p class="medium-text">Для выделения участка текста используется полужирное начертание. Курсивное начертание при выделении не&nbsp;используется. Рекомендуется выделять только важные участки текста, используя при этом тег &lt;strong&gt;. В&nbsp;крайнем случае при выделении участка такой&nbsp;же важности, что и&nbsp;окружающий текст, возможно использование тега &lt;b&gt;.</p>
 <!-- Таблица с важной инфой -->
 <p class="medium-text">Выделенный участок должен быть максимально коротким, длиной от&nbsp;одного слова до&nbsp;фразы.</p>
-<!-- Пример ДА/НЕТ-->
+        <article class="example-container">
+            <article class="example yes grid3">
+                <div>
+                    <img src="images/example_yes.svg">
+                    <p class="heading"><strong></strong></p>
+                </div>
+                <p>Участвуют <strong>не&nbsp;более</strong> трёх человек.</p>
+            </article>
+            <article class="example no grid3">
+                <div>
+                    <img src="images/example_no.svg">
+                    <p class="heading"><strong></strong></p>
+                </div>
+                <p>Участвуют <i>не&nbsp;более трёх человек</i>.</p>
+            </article>
+            <article class="example no grid3">
+                <div>
+                    <img src="images/example_no.svg">
+                    <p class="heading"><strong></strong></p>
+                </div>
+                <p>Участвуют <strong>не&nbsp;более трёх человек</strong>.</p>
+            </article>
+        </article>
 <!-- Совет-->
 <!-- Блок кода -->
 <h2>Служебный текст</h2>
 <p class="large-text">Начертания ниже используются для функционального текстового наполнения сайта.</p>
 <h3>Ссылки</h3>
 <p class="medium-text">Нажатие на&nbsp;ссылку всегда ведет к&nbsp;открытию новой страницы или скачиванию документа. Таким образом название ссылки должно отвечать на&nbsp;вопрос &laquo;Что откроется?&raquo; и&nbsp;являться словосочетанием, включающим в&nbsp;себя существительное.</p>
-<!-- Пример ДА/НЕТ-->
+        <article class="example-container">
+            <article class="example yes grid3">
+                <div>
+                    <img src="images/example_yes.svg">
+                    <p class="heading"><strong></strong></p>
+                </div>
+                <p>Заполните <a>Согласие на&nbsp;обработку данных</a>.</p>
+            </article>
+            <article class="example no grid3">
+                <div>
+                    <img src="images/example_no.svg">
+                    <p class="heading"><strong></strong></p>
+                </div>
+                <p>Заполните в&nbsp;<a>документе</a> личные данные участника.</p>
+            </article>
+            <article class="example no grid3">
+                <div>
+                    <img src="images/example_no.svg">
+                    <p class="heading"><strong></strong></p>
+                </div>
+                <p>Затем <a>перейдите</a> к&nbsp;заполнению документа.</p>
+            </article>
+        </article>
 <p class="medium-text">Если ссылка ведет на&nbsp;сторонний ресурс или приводит к&nbsp;скачиванию документа&nbsp;&mdash; предупредите об&nbsp;этом в&nbsp;атрибуте aria-label, в&nbsp;котором опишите глагольным словосочетанием, что именно произойдет (например, &laquo;Скачать PDF&raquo; или &laquo;Открыть Google Drive&raquo;).</p>
 <p class="medium-text">Размер ссылки должен соответствовать размеру текста вокруг неё. Минимальная длина ссылки подсчитана на&nbsp;основе количества символов, входящих в&nbsp;минимальную область комфортного нажатия (44&nbsp;px). Цвет ссылок подробнее разобран на&nbsp;странице <a href='colors.html'>Цвета</a>.</p>
 <p class="medium-text">Рекомендуется делать ссылки длиной в&nbsp;5&nbsp;слов или меньше, по&nbsp;правилу 7&nbsp;плюс-минус 2.</p>
