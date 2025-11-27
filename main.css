@@ -163,6 +163,6 @@ p, a, code {
     text-decoration: underline;
 }
 
-img {
+main>img {
     width: 100%;
 }
