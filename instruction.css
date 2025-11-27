@@ -187,7 +187,7 @@
     width:var(--grid-6);
     border-radius: var(--radius-large);
     box-sizing: border-box;
-    padding: 0  var(--indent-small) 8px var(--indent-small);
+    padding: 0  var(--indent-small) var(--indent-extrasmall) var(--indent-small);
 
 }
 .advise p {
@@ -202,5 +202,6 @@
     font-weight: 800;
     color: var(--brand--accent-3);
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: var(--indent-small);
+    margin-top: var(--indent-medium);
 }
