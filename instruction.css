@@ -106,7 +106,7 @@
 --radius-large: 1.25rem; /*20px*/
 }
 
-.advise, .example-container, .illustration {
+.advise, .example-container, .illustration-container {
     margin-bottom: 40px;
 }
 
@@ -116,13 +116,14 @@
 
 /* ||| Пример Да Нет*/
 
-.example-container {
+.example-container, .illustration-container {
     display: flex;
     flex-direction: row;
     gap: var(--grid-gap);
     row-gap: var(--grid-gap);
     max-width: var(--grid-6);
     flex-wrap: wrap;
+    padding-left: 0;
 }
 
 .example {
@@ -204,4 +205,15 @@
     display: block;
     margin-bottom: var(--indent-small);
     margin-top: var(--indent-medium);
+}
+
+/* ||| Иллюстрация*/
+.illustration-container li {
+    display: flex;
+    flex-direction: column; 
+}
+.illustration-container p {
+}
+.illustration-container img {
+    width: 100%;
 }
