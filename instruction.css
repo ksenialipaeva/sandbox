@@ -135,6 +135,7 @@
 .example .heading{    font-size: var(--title--h4); line-height: 0;}
 .explanation {    color: var(--grey--50);}
 .example>img {    width:100%;}
+.example code {padding-top: 20px;}
 
 .example.yes {    border-color: var(--feedback--success--light);}
 .example.no {    border-color: var(--feedback--danger--light);}
@@ -142,6 +143,7 @@
 
 .example.yes .heading ::before {    content: "Да";    }
 .example.no .heading ::before {    content: "Нет";}
+.example.definetely.no .heading ::before {    content: "Ни в коем случае";}
 .example.acceptable .heading ::before {    content: "Допустимо";}
 
 .example.yes .heading {    color: var(--feedback--success--dark);}
