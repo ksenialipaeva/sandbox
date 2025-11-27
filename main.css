@@ -77,6 +77,7 @@
 
 /* Text-size styles */
 /* base size: body--small (16px) */
+--sidemenu: 0.5rem;
 --caption: 0.75rem;
 --title--h1: 4rem;
 --title--h2: 2.25rem;
@@ -174,6 +175,8 @@ aside{
 
 nav > ul{
     padding-inline-start: 24px;
+    padding-inline-end: 24px;
+    padding-top: 48px;
 }
 
 .side-menu-heading{
@@ -197,4 +200,10 @@ nav > ul{
 .side-menu-element > a{
     text-decoration: none;
     color: var(--main--dark);
+}
+
+ul > img{
+    width: 100%;
+    padding-top: --sidemenu;
+    padding-bottom: 20px;
 }
