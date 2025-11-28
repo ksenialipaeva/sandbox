@@ -95,7 +95,7 @@
 --grid-4: calc(var(--grid-1)*4 + var(--grid-gap)*3);
 --grid-5: calc(var(--grid-1)*5 + var(--grid-gap)*4);
 --grid-6: calc(var(--grid-1)*6 + var(--grid-gap)*5);
---grid-side-menu: 200px;
+--grid-side-menu: 300px;
 
 /* Отступы */
 --indent-extrasmall: 0.5rem; /*8px*/

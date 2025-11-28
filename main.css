@@ -100,7 +100,13 @@
 
 }
 
-body {background-color: var(--main--light);} 
+body {
+    background-color: var(--main--light);
+    display: flex;
+    align-items: flex-start; 
+    margin: 0;
+    padding: 0;
+} 
 
 /*||| Шрифты*/
 body {font-family: "Nunito", sans-serif;}
@@ -170,7 +176,10 @@ main>img {
 
 aside{
     background-color: var(--brand--accent--2-5-l);
-    width: 300px;
+    position: sticky;
+    /*position: -webkit-sticky; /*для сафари*/
+    bottom: 100px;
+    flex: 0 0 var(--grid-side-menu);
 }
 
 nav > ul{
@@ -182,7 +191,7 @@ nav > ul{
 .side-menu-heading{
     list-style: none;
     color: var(--brand--brand);
-    font-size: var(--title--h4);
+    font-size: var(--body--medium); /*Я подумала что какое-то огромное меню иначе вот*/
     font-weight: 800;
     padding-top: var(--sidemenu);
     padding-bottom: var(--sidemenu);
@@ -191,7 +200,7 @@ nav > ul{
 .side-menu-element{
     list-style: none;
     color: var(--main--dark);
-    font-size: var(--body--large);
+    font-size: var(--body--medium); /*Я подумала что какое-то огромное меню иначе вот*/
     font-weight: 500;
     padding-top: var(--sidemenu);
     padding-bottom: var(--sidemenu);
@@ -204,6 +213,11 @@ nav > ul{
 
 ul > img{
     width: 100%;
-    padding-top: --sidemenu;
+    padding-top: var(--sidemenu);
     padding-bottom: 20px;
+}
+
+main {
+    max-width: var(--grid-6);
+    margin:auto;
 }
