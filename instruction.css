@@ -217,3 +217,16 @@
 .illustration-container img {
     width: 100%;
 }
+
+.css {color:black};
+.css :first-child  {     color:maroon !important;}
+
+.punctuation {    color: black;}
+
+.bracket {    color: blue;}
+
+.css .property { color:red;}
+
+.css .numerical { color:seagreen;}
+.css .letter { color:cornflowerblue;}
+
