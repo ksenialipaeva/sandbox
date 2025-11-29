@@ -107,7 +107,16 @@ body {
     margin: 0;
     padding: 0;
 } 
-
+body>span {
+    position: absolute;
+    background-color: var(--brand--accent--2-15-l);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 172px;
+    float: left;
+}
 /*||| Шрифты*/
 body {font-family: "Nunito", sans-serif;}
 code {font-family: "Roboto Mono", monospace;}
@@ -116,6 +125,14 @@ code {font-family: "Roboto Mono", monospace;}
 /*||| Цвета типографики*/
 
 h1, h2, h3, h4 {color: var(--brand--brand--40-d);}
+
+h1 {
+    height: 172px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    
+}
 
 p {color: var(--main--dark);}
 
@@ -171,7 +188,7 @@ p, a, code {
 }
 
 main>img {
-    width: 50%;
+    width: 100%;
 }
 
 aside{
@@ -220,4 +237,5 @@ ul > img{
 main {
     max-width: var(--grid-6);
     margin:auto;
+
 }
