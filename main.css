@@ -87,6 +87,9 @@
 --body--medium: 1.25rem;
 --body--small: 1rem;
 
+--weight--bold: 800;
+--weight--regular: 500;
+
 
 /* Grid size */
 --grid-1: 100px;
@@ -192,10 +195,10 @@ p,a {line-height: 150%;}
 
 /*||| Декорация типографики*/
 b, strong, .side-menu>a, h1, h2, h3, h4  {
-    font-weight: 800;
+    font-weight: var(--weight--bold);
 }
 p, a, code {
-    font-weight: 500;
+    font-weight: var(--weight--regular);
 }
 .side-menu>a {
     text-decoration: underline;
@@ -223,7 +226,7 @@ nav > ul{
     list-style: none;
     color: var(--brand--brand);
     font-size: var(--body--medium);
-    font-weight: 800;
+    font-weight: var(--weight--bold);
     padding-top: var(--sidemenu);
     padding-bottom: var(--sidemenu);
 }
@@ -232,7 +235,7 @@ nav > ul{
     list-style: none;
     color: var(--main--dark);
     font-size: var(--body--medium);
-    font-weight: 500;
+    font-weight: var(--weight--regular);
     padding-top: var(--sidemenu);
     padding-bottom: var(--sidemenu);
 }
@@ -250,7 +253,7 @@ nav ul img{
 
 nav ul .active {
     text-decoration: underline;
-    font-weight: 800;
+    font-weight: var(--weight--bold);
 }
 
 pre {
@@ -259,4 +262,44 @@ pre {
     width: auto;
     max-height: 50vh;
     border-radius: var(--radius-large);
+}
+
+.card{
+    width: var(--grid-2);
+    height: var(--grid-2);
+    border-radius: var(--radius-large);
+    overflow:hidden;
+    text-decoration: none;
+}
+
+.card_background{
+    width: 100%;
+    height: 80%;
+    background-color: var(--grey--3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_background > img{
+    width: 80%;
+}
+
+.card_title{
+    width: 100%;
+    height: 20%;
+    background-color: var(--brand--brand--50-l);
+    font-size: var(--body--medium);
+    font-weight: var(--weight--bold);
+    color: var(--main--light);
+    padding-left: var(--indent-small);
+    display: flex;
+    align-items: center;
+}
+
+.card_section{
+    display: flex;
+    flex-direction: row;
+    gap: var(--grid-gap);
+    flex-wrap: wrap;
 }
