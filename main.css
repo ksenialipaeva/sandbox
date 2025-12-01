@@ -303,3 +303,52 @@ pre {
     gap: var(--grid-gap);
     flex-wrap: wrap;
 }
+
+    position: relative;
+}
+
+/* ||| Иллюстрация*/
+.illustration-container li {
+    display: flex;
+    flex-direction: column; 
+}
+.illustration-container img {
+    width: 100%;
+}
+
+
+/** ||| JS copy Code **/
+
+.js-copy-btn {
+position:absolute;
+right: 0;
+bottom: 0;
+z-index: 2;
+padding: 0.75rem;
+}
+
+pre:hover .js-copy-btn {
+  opacity: 0.2;
+}
+
+pre .js-copy-btn:hover {
+  opacity: 0.4;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.js-copy-done {
+position: absolute;
+left: 50%;
+transform: translate(-50%, -50%);
+top: 50%;
+background-color: rgba(0, 0, 0, 0.6);
+color: white;
+padding: .75rem 1.5rem;
+border-radius: 3px;
+transition: opacity 0.5s;
+}
+
+/*.js-copy-done.faded {
+opacity: 0;
+}*/
