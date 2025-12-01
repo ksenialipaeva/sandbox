@@ -98,12 +98,17 @@
 --grid-side-menu: 300px;
 
 /* Отступы */
---indent-extrasmall: 0.5rem; /*8px*/
---indent-small: 0.75rem; /*12px*/
+--indent-x-x-x-small: 0.25rem; /*4px*/
+--indent-x-x-small: 0.5rem; /*8px*/
+--indent-x-small: 0.75rem; /*12px*/
+--indent-small: 1rem; /*16px*/
 --indent-medium: 1.25rem; /*20px*/
+--indent-large: 1.5rem; /*24px*/
 
 /* Радиусы */
 --radius-large: 1.25rem; /*20px*/
+--radius-small: 0.75rem; /*12px*/
+--radius-extrasmall: 0.5rem; /*12px*/
 }
 
 .advise, .example-container, .illustration-container {
@@ -130,12 +135,12 @@
     box-sizing: border-box;
     border: 2px solid;
     border-radius: var(--radius-large);
-    padding: 0  var(--indent-small) var(--indent-medium) var(--indent-small);
+    padding: 0  var(--indent-x-small) var(--indent-medium) var(--indent-x-small);
 }
 .example div {
     display: flex;
     flex-direction: row;
-    gap: var(--indent-extrasmall);
+    gap: var(--indent-x-x-small);
     align-items:flex-start;
 
 }
@@ -191,11 +196,11 @@
     display: flex;
     flex-direction: row;
     background: linear-gradient(0.25turn, var(--grey--90),var(--grey--70));
-    gap:var(--indent-small);
+    gap:var(--indent-x-small);
     width:var(--grid-6);
     border-radius: var(--radius-large);
     box-sizing: border-box;
-    padding: 0  var(--indent-small) var(--indent-extrasmall) var(--indent-small);
+    padding: 0  var(--indent-x-small) var(--indent-x-x-small) var(--indent-x-small);
 
 }
 .advise p {
@@ -210,7 +215,37 @@
     font-weight: 800;
     color: var(--brand--accent-3);
     display: block;
-    margin-bottom: var(--indent-small);
+    margin-bottom: var(--indent-x-small);
     margin-top: var(--indent-medium);
 }
 
+
+button.large-button {
+    padding: var(--indent-x-small) var(--indent-medium);
+    border-radius: var(--radius-large);
+    font-size: var(--body--large);
+}
+button.medium-button {
+    padding: var(--indent-x-x-small) var(--indent-small);
+    border-radius: var(--radius-small);
+    font-size: var(--body--medium);
+}
+button.small-button {
+    padding: var(--indent-x-x-x-small) var(--indent-x-x-small);
+    border-radius: var(--radius-extrasmall);
+    font-size: var(--body--small);
+}
+
+.primary-button {
+    background-color: var(--brand--brand);
+    border: none;
+}
+
+.secondary-button {
+    background-color: var(--brand--brand);
+}
+
+.empty-button {
+    background-color:transparent;
+    border: none;
+}
