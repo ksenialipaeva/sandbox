@@ -130,7 +130,7 @@
     box-sizing: border-box;
     border: 2px solid;
     border-radius: var(--radius-large);
-    padding: 0  var(--indent-small) 20px var(--indent-small);
+    padding: 0  var(--indent-small) var(--indent-medium) var(--indent-small);
 }
 .example div {
     display: flex;
@@ -148,9 +148,10 @@
 }
 .explanation {    color: var(--grey--50);}
 .example>img {    width:100%; }
-.example p:not(.heading) {
+.example p:not(.heading), .example li {
     margin-top: 0;
     margin-bottom: 0;
+    font-size: var(--body--small);
 }
 
 .example.yes {    border-color: var(--feedback--success--light);}
@@ -169,14 +170,20 @@
 
 #grey-mistake {
     color: var(--grey--20);
+    font-size: var(--body--small);
+}
+
+#grey-example {
+    color: var(--grey--90);
+    font-size: var(--body--small);
 }
 
 .warning-text {
     color: var(--feedback--danger--dark);
 }
 
-.warning-text, #grey-mistake, .explanation, li {
-    font-size: var(--body--medium);
+.warning-text, #grey-mistake {
+    font-size: var(--body--small);
 }
 
 /* ||| Совет*/
