@@ -241,9 +241,17 @@ button.small-button {
     border: none;
 }
 
+
+
 .secondary-button {
-    background-color: var(--brand--brand);
+    background-color:transparent;
+    border-style: solid;
+    border-color: var(--brand--brand);
 }
+
+.secondary-button.large-button {border-width: 2.5px}
+.secondary-button.medium-button {border-width: 2.25px}
+.secondary-button.small-button {border-width: 2px}
 
 .empty-button {
     background-color:transparent;
