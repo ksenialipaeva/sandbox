@@ -17,3 +17,6 @@
 
 доделать кнопки копировать на коде и название языков
 https://siteberg.ru/articles/podsvetka-sintaksisa-i-kopirovanie-v-bufer-obmena-na-chistom-js/
+
+ПОЛЕЗНЫЕ ССЫЛКИ
+Текст в юникод https://onlinetools.com/unicode/convert-unicode-to-html
