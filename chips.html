@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Чипы</title>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="instruction.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!--Подсветка синтаксиса-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/shades-of-purple.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+
+<body>
+<main>
+<h1>Чипы</h1>
+<p class="large-text">Чипы используются для визуализации выбираемых вариантов.</p>
+<h2>Когда использовать?</h2>
+<h3>Чипы или чекбоксы/тогглы?</h3>
+<p class="medium-text">Чипы визуально нагляднее чекбоксов и&nbsp;тогглов, поскольку они заметнее. Также чипы занимают меньше вертикального пространства, поскольку являются строковым элементом. Поэтому в&nbsp;интерфейсе предпочтение отдается именно чипам, а&nbsp;тогглы и&nbsp;чекбоксы рекомендуется использовать, например, в&nbsp;формах для заполнения.</p>
+<h3>Чипы или бейджи?</h3>
+<p class="medium-text">Чипы&nbsp;&mdash; это элемент ввода. Их&nbsp;добавляет, выбирает, редактирует и&nbsp;удаляет пользователь.</p>
+<p class="medium-text">Бейдж&nbsp;&mdash; это элемент визуализации. Их&nbsp;видит пользователь, но&nbsp;не&nbsp;может отредактировать.</p>
+<p class="medium-text">Иногда чип&nbsp;&mdash; это бейдж в&nbsp;режиме редактирования. Например:</p>
+<ol>
+    <li>Пользователь создаёт новую игру и&nbsp;прописывает с&nbsp;помощью чипов её&nbsp;характеристики: командная, синхронная, с&nbsp;картинками, со&nbsp;звуком. Это чипы.</li>
+    <li>После публикации игры пользователь видит её&nbsp;карточку с&nbsp;характеристиками. Это бейджи.</li>
+    <li>Он&nbsp;нажимает на&nbsp;&laquo;Редактировать игру&raquo;. Это снова чипы.</li>
+</ol>
+<h2>Анатомия</h2>
+<img src="images/chips/anatomy.png">
+<h2>Спецификация</h2>
+<h3>Размер и контейнер</h3>
+<p class="medium-text">Рекомендуется использовать размер Medium и&nbsp;отображать чипы строкой. Размер Small используется только в&nbsp;случае, когда необходимо отобразить чипы внутри Строки ввода.</p>
+<h3>Содержание</h3>
+<p class="medium-text">Рекомендуется создавать теги не&nbsp;длиннее 19&nbsp;символов. Лучше использовать слова или словосочетания и&nbsp;не&nbsp;использовать предложения, знаки препинания и&nbsp;названия компаний.</p>
+<h3>Вёрстка</h3>
+<p class="medium-text">Чипы&nbsp;&mdash; это строковый элемент, поэтому они располагаются друг за&nbsp;другом и&nbsp;переносятся на&nbsp;следующую строку как текст. Они выравниваются по&nbsp;левому краю.</p>
+<p class="medium-text">Вертикальный и&nbsp;горизонтальный промежуток:</p>
+<ul>
+    <li>8px для Medium</li>
+    <li>4px для Small</li>
+</ul>
+<article class="example-container">
+    <article class="example yes grid6">
+        <div>
+            <img src="images/example_yes.svg">
+            <p class="heading"><strong></strong></p>
+        </div>
+        <img src="images/chips/chips_yes.png">
+    </article>
+    <article class="example no grid3">
+        <div>
+            <img src="images/example_no.svg">
+            <p class="heading"><strong></strong>. Длина</p>
+        </div>
+        <img src="images/chips/chips_no1.png">
+    </article>
+        <article class="example no grid3">
+        <div>
+            <img src="images/example_no.svg">
+            <p class="heading"><strong></strong>. Отступы</p>
+        </div>
+        <img src="images/chips/chips_no2.png">
+    </article>
+</article>
+<h2>Варианты</h2>
+<section class="card_section">
+    <div class="card example_card" id="example_card_blue">
+        <div class="card_background">
+            <img src="images/chips/chips_blue.png">
+        </div>
+        <div class="card_title">Удаляемые</div>
+    </div>
+    <div class="card example_card" id="example_card_yellow">
+        <div class="card_background">
+            <img src="images/chips/chips_yellow.png">
+        </div>
+        <div class="card_title">Неудаляемые</div>
+    </div>
+    <div class="card example_card" id="example_card_red">
+        <div class="card_background">
+            <img src="images/chips/chips_red.png">
+        </div>
+        <div class="card_title">С выпадающим меню</div>
+    </div>
+</section>
+<h3>Как выбрать вариант?</h3>
+<img src="images/chips/choosing_scheme.png">
+<h3>Удаляемые</h3>
+<p class="medium-text">Для визуализации многочисленных и&nbsp;уникальных опций, выбранных пользователем.</p>
+<!-- Страшный интерактив-->
+<article class="code-container">
+<pre><code class="language-html">&lt;body&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+&lt;/body&gt;</code></pre>
+</article>
+<pre><code class="language-css">.punctuation {    color: black;}
+.bracket {    color: blue;}
+.css .property { color:22px;}
+.css .numerical { color:seagreen;}
+.css .letter { color:cornflowerblue;}
+</code></pre>
+<h3>Неудаляемые</h3>
+<p class="medium-text">Для визуализации малочисленных и&nbsp;заранее определенных опций, выбранных пользователем.</p>
+<!-- Страшный интерактив-->
+<article class="code-container">
+<pre><code class="language-html">&lt;body&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+&lt;/body&gt;</code></pre>
+</article>
+<pre><code class="language-css">.punctuation {    color: black;}
+.bracket {    color: blue;}
+.css .property { color:22px;}
+.css .numerical { color:seagreen;}
+.css .letter { color:cornflowerblue;}
+</code></pre>
+<h3>С выпадающим меню</h3>
+<p class="medium-text">Для визуализации и&nbsp;выбора опций внутри таблицы.</p>
+<!-- Страшный интерактив-->
+<article class="code-container">
+<pre><code class="language-html">&lt;body&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+&lt;/body&gt;</code></pre>
+</article>
+<pre><code class="language-css">.punctuation {    color: black;}
+.bracket {    color: blue;}
+.css .property { color:22px;}
+.css .numerical { color:seagreen;}
+.css .letter { color:cornflowerblue;}
+</code></pre>
+<!-- Ссылка на инструкцию-->
+
+
+<p class="medium-text"></p>
+</main>
+<script src="article.js"></script>
+<script src="showcode.js"></script>
+</body>
+</html>
