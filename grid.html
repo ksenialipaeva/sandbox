@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Сетка</title>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="instruction.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!--Подсветка синтаксиса-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/shades-of-purple.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+<main>
+<h1>Сетка</h1>
+<h2>Колоночная сетка</h2>
+<p class="medium-text">Вертикальный ритм задается 6&nbsp;колонками (столбцами). В&nbsp;рамках одного состояния экрана их&nbsp;количество и&nbsp;размер остаются одинаковыми. В&nbsp;пространстве между колонками (межколоннике) элементы размещаться не&nbsp;должны.</p>
+<p class="medium-text">Используя переменные для сетки, можно настроить необходимое для дизайна количество контейнеров. При этом разметка рабочих областей происходит строго по выбранной сетке и может делить контент на 1, 2, 3, 6 горизонтальных контейнеров. Их количество и сочетания могут варьироваться от страницы к странице.</p>
+<h2>Адаптивная сетка</h2>
+<p class="medium-text">Наша сетка имеет три состояния: десктоп, планшет, смартфон.</p>
+<p class="medium-text">На&nbsp;картинках ниже представлены сетки для экранов разной ширины, с&nbsp;помощью которых выстраивается адаптивная верстка сайта.</p>
+<h2>Адаптивная сетка</h2>
+<h3>6-ти колоночная сетка</h3>
+<h4>Для разрешений экрана 1040px+</h4>
+<ul>
+    <li>Ширина контентной области: 700px</li>
+    <li>Размер колонки: 100px</li>
+    <li>Межколонник: 20px</li>
+</ul>
+<p class="medium-text">Ширина бокового меню не&nbsp;должна превышать 300px.</p>
+<img src="images/grid/grid_desktop.png">
+<h4>Для разрешений экрана 1040px — 700px</h4>
+<ul>
+    <li>Ширина контентной области: масштабируемая</li>
+    <li>Поля: 40px</li>
+    <li>Межколонник: 20px</li>
+</ul>
+<img src="images/grid/grid_tablet.png">
+<h3>4-х колоночная сетка</h3>
+<h4>Для разрешений экрана до 700px</h4>
+<ul>
+    <li>Ширина контентной области: масштабируемая</li>
+    <li>Поля: 12px</li>
+    <li>Межколонник: 12px</li>
+</ul>
+<img src="images/grid/grid_mobile.png">
+<!-- Блок кода-->
+</main>
+<script src="article.js"></script>
+<script src="showcode.js"></script>
+</body>
+</html>
