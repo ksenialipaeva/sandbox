@@ -219,18 +219,25 @@
     margin-top: var(--indent-medium);
 }
 
+.large-button {border-width: 2.5px}
+.medium-button {border-width: 2.25px}
+.small-button {border-width: 2px}
 
-button.large-button {
+button:hover, button:active {
+    cursor: pointer;
+}
+
+.large-button {
     padding: var(--indent-x-small) var(--indent-medium);
     border-radius: var(--radius-large);
     font-size: var(--body--large);
 }
-button.medium-button {
+.medium-button {
     padding: var(--indent-x-x-small) var(--indent-small);
     border-radius: var(--radius-small);
     font-size: var(--body--medium);
 }
-button.small-button {
+.small-button {
     padding: var(--indent-x-x-x-small) var(--indent-x-x-small);
     border-radius: var(--radius-extrasmall);
     font-size: var(--body--small);
@@ -239,21 +246,36 @@ button.small-button {
 .primary-button {
     background-color: var(--brand--brand);
     border: none;
+    color: var(--main--light);
 }
 
-
+.primary-button:hover {    background-color: var(--brand--brand--70-d);}
+.primary-button:active {    background-color: var(--brand--brand--40-d);}
 
 .secondary-button {
     background-color:transparent;
     border-style: solid;
     border-color: var(--brand--brand);
+    color: var(--brand--brand);
 }
 
-.secondary-button.large-button {border-width: 2.5px}
-.secondary-button.medium-button {border-width: 2.25px}
-.secondary-button.small-button {border-width: 2px}
+.secondary-button:hover {    
+    border-color: var(--brand--brand--70-d);
+    color: var(--brand--brand--70-d);
+}
+.secondary-button:active {    
+    border-color: var(--brand--brand--40-d);
+    color: var(--brand--brand--40-d);
+}
 
 .empty-button {
     background-color:transparent;
     border: none;
+    color: var(--brand--brand)
+}
+.empty-button:hover {
+    color: var(--brand--brand--70-d);
+}
+.empty-button:active {
+    color: var(--brand--brand--40-d);
 }
