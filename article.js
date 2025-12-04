@@ -15,7 +15,7 @@ let sidebar = [
     ['атомы',
         [
             ['Чекбоксы','checkboxes.html'],
-            ['Радиобаттоны','radiobuttons.html'],
+            ['Радиокнопки','radiobuttons.html'],
             ['Тогглы','toggles.html']
         ]],
     ['молекулы',
