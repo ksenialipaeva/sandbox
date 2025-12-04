@@ -392,3 +392,30 @@ transition: opacity 0.5s;
 /*.js-copy-done.faded {
 opacity: 0;
 }*/
+
+/* Страшный интерактив */
+.interactive-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap:var(--grid-gap);
+}
+.interactive-container > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.interactive-container > section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--grey--30);
+    border-radius: var(--radius-large);
+}
+.interactive-container li {
+    list-style: none;
+}
+.interactive-container ul {
+    padding-left: 0;
+    margin:0;
+}

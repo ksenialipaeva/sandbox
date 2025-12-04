@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Заголовок</title>
+    <link rel="stylesheet" href="../main.css"/>
+    <link rel="stylesheet" href="../instruction.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!--Подсветка синтаксиса-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/shades-of-purple.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+
+<body>
+<main>
+    <section class="interactive-container">
+        <form class="grid2">
+            <article>
+                <label for="state-select">Состояние</label>
+                <select name="state" id="state-select">
+                    <option value="default">Default</option>
+                    <option value="hover">Hover</option>
+                    <option value="active">Active</option>
+                    <option value="disabled">Disabled</option>
+                </select>
+            </article>
+            <article>
+                <label for="mode-select">Вид</label>
+                <select name="mode" id="mode-select">
+                    <option value="default">Закрыт</option>
+                    <option value="hover">Открыт</option>
+                </select>
+            </article>       
+        </form>
+        <section class="grid2">
+            <button>example</button>
+        </section>
+        <ul class="grid2">
+            <li>
+                <strong>text-style</strong>
+                <span>medium</span>
+            </li>
+            <li>
+                <strong>text-style</strong>
+                <span>medium</span>
+            </li>
+            <li>
+                <strong>text-style</strong>
+                <span>medium</span>
+            </li>
+            <li>
+                <strong>text-style</strong>
+                <span>medium</span>
+            </li>
+            <li>
+                <strong>text-style</strong>
+                <span>medium</span>
+            </li>
+            <li>
+                <strong>text-style</strong>
+                <span>medium</span>
+            </li>
+        </ul>
+    </section>
+    
+
+</main>
+<script src="../article.js"></script>
+<script src="../showcode.js"></script>
+</body>
+</html>
