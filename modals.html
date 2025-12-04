@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Модальные окна</title>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="instruction.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!--Подсветка синтаксиса-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/shades-of-purple.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+<main>
+<h1>Модальные окна</h1>
+<p class="large-text">Модальные окна используются для информирования и&nbsp;принятия решений.</p>
+<h2>Когда использовать?</h2>
+<p class="medium-text">Модальные окна необходимо открывать после нажатия на&nbsp;кнопку. Открытие окон, не&nbsp;вызванное действиями пользователя, обычно оценивается негативно и&nbsp;ведет к&nbsp;недоверию к&nbsp;сайту.</p>
+<h2>Спецификация</h2>
+<h3>Текст</h3>
+<p class="medium-text">Наборный текст и&nbsp;заголовки подчиняются правилам, описанным на&nbsp;странице Типографика.</p>
+<h4>Выравнивание</h4>
+<ul>
+    <li>Короткий текст (до&nbsp;30&nbsp;символов): выравнивать по&nbsp;центру.</li>
+    <li>Длинный текст: выравнивать по&nbsp;левому краю.</li>
+    <li>Заголовки в&nbsp;окнах без заглавной иллюстрации выравниваются по&nbsp;левому краю.</li>
+    <li>Заголовки в окнах с модальной иллюстрацией выравниваются по центру.</li>
+</ul>
+<h3>Вёрстка</h3>
+<p class="medium-text">Окно должно быть расположено статично в&nbsp;центре экрана.</p>
+<h4>Размеры</h4>
+<p class="medium-text">Ширину и&nbsp;высоту модального окна можно задавать по&nbsp;необходимости, желательно вписываясь в&nbsp;сетку страницы. Минимальная ширина модального окна 300px, при этом заголовок и&nbsp;подзаголовок должны умещаться каждый в&nbsp;одну строку. Максимальная ширина окна соответствует области контента, предусмотренного сеткой.</p>
+<h4>Кнопки</h4>
+<p class="medium-text">Обязательно должна присутствовать кнопка закрыть в&nbsp;верхнем правом углу.</p>
+<p class="medium-text">В&nbsp;подвале окна могут быть кнопки всех трех степеней иерархии.</p>
+<ul>
+    <li>Primary (всегда ровно одна) кнопку необходимо использовать для целевого действия, например, &laquo;Сохранить&raquo;</li>
+    <li>Secondary (одна или две, если их&nbsp;две, то&nbsp;они должны быть разделены расстоянием, например, одна слева и&nbsp;вторая вместе с&nbsp;Primary справа) кнопку необходимо использовать для важных действий, которые, однако, не&nbsp;требуют первостепенного внимания пользователя, например, &laquo;Понятно&raquo; (пользователь должен сначала ознакомиться с&nbsp;содержанием, не&nbsp;отвлекаясь на&nbsp;кнопку);</li>
+    <li>Empty (максимум одна) кнопку необходимо использовать для маловероятных действий.</li>
+</ul>
+<p class="medium-text">Избегайте темных паттернов, например, неверно оформлять кнопку отказа от&nbsp;Cookies Empty кнопкой, поскольку это достаточно вероятное действие, которое пользователь имеет право легко находить.</p>
+<p class="medium-text">Кнопки всегда сверстаны в&nbsp;один ряд с&nbsp;промежутками в&nbsp;16px. В&nbsp;большинстве случаев они выровнены по&nbsp;центру.</p>
+<p class="medium-text">Кнопки должны быть расположены в&nbsp;порядке неуменьшения важности (при чтении слева направо можно ознакомиться со&nbsp;всеми вариантами).</p>
+<h2>Анатомия</h2>
+<h3>Элементы</h3>
+<img src="images/modals/elements.png">
+<h3>Статичные размеры</h3>
+<img src="images/modals/anatomy.png">
+<article class="code-container">
+<pre><code class="language-html">&lt;body&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+&lt;/body&gt;</code></pre>
+</article>
+<pre><code class="language-css">.punctuation {    color: black;}
+.bracket {    color: blue;}
+.css .property { color:22px;}
+.css .numerical { color:seagreen;}
+.css .letter { color:cornflowerblue;}
+</code></pre>
+</main>
+<script src="article.js"></script>
+<script src="showcode.js"></script>
+</body>
+</html>

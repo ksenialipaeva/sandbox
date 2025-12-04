@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Чекбоксы</title>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="instruction.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!--Подсветка синтаксиса-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/shades-of-purple.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+<main>
+<h1>Чекбоксы</h1>
+<p class="large-text">Чекбоксы используются, когда у&nbsp;пользователя есть возможность выбрать любое количество вариантов (все, несколько или ничего).</p>
+<h2>Анатомия</h2>
+<img src="images/checkboxes/anatomy.png">
+<h2>Спецификация</h2>
+<h3>Вёрстка</h3>
+<p class="medium-text">Чекбоксы могут быть расположены горизонтально или вертикально.</p>
+<p class="medium-text">Рекомендуемое максимальное количество вариантов ответа для одной группы чекбоксов&nbsp;&mdash; не&nbsp;более 9. Одиночный чекбокс может быть использован для включения/выключения какого-то действия.</p>
+<p class="medium-text">По&nbsp;умолчанию пользователь не&nbsp;видит выбранным ни&nbsp;один из&nbsp;вариантов ответа.</p>
+<h3>Содержание</h3>
+<p class="medium-text">Каждый чекбокс должен справа иметь лейбл, начинающийся с&nbsp;заглавной буквы. Использование в&nbsp;лейблах только заглавных и&nbsp;строчных букв не&nbsp;допускается. Длина лейбла&nbsp;&mdash; не&nbsp;более одной строки (45-70&nbsp;символов), а&nbsp;желательно 2-3&nbsp;слова;</p>
+
+<!-- Страшный интерактив-->
+<article class="code-container">
+<pre><code class="language-html">&lt;body&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+&lt;/body&gt;</code></pre>
+</article>
+<pre><code class="language-css">.punctuation {    color: black;}
+.bracket {    color: blue;}
+.css .property { color:22px;}
+.css .numerical { color:seagreen;}
+.css .letter { color:cornflowerblue;}
+</code></pre>
+</main>
+<script src="article.js"></script>
+<script src="showcode.js"></script>
+</body>
+</html>
