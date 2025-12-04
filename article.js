@@ -16,7 +16,7 @@ let sidebar = [
         [
             ['Чекбоксы','checkboxes.html'],
             ['Радиокнопки','radiobuttons.html'],
-            ['Тогглы','toggles.html']
+            ['Переключатели','toggles.html']
         ]],
     ['молекулы',
         [
@@ -30,7 +30,6 @@ let sidebar = [
         [
             ['Таблицы','tables.html'],
             ['Модальные окна','modals.html'],
-            ['Боковое меню','sidemenu.html']
         ]]
 ]
 
