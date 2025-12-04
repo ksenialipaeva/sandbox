@@ -103,11 +103,12 @@
 
 /* Отступы */
 --sidemenu: 0rem;
---indent-extrasmall: 0.5rem; /*8px*/
---indent-small: 0.75rem; /*12px*/
---indent-base: 1rem;
+--indent-x-x-x-small: 0.25rem; /*4px*/
+--indent-x-x-small: 0.5rem; /*8px*/
+--indent-x-small: 0.75rem; /*12px*/
+--indent-small-new: 1rem; /*16px*/
 --indent-medium: 1.25rem; /*20px*/
---indent-sidemenu: 1.5rem;
+--indent-large: 1.5rem; /*24px*/
 
 /* Радиусы */
 --radius-large: 1.25rem; /*20px*/
@@ -221,8 +222,8 @@ aside{
 }
 
 nav > ul{
-    padding-inline-start: var(--indent-sidemenu);
-    padding-inline-end: var(--indent-sidemenu);
+    padding-inline-start: var(--indent-large);
+    padding-inline-end: var(--indent-large);
     padding-top: var(--sidemenu);
 }
 
@@ -242,8 +243,8 @@ nav > ul{
     color: var(--main--dark);
     font-size: var(--body--small);
     font-weight: var(--weight--regular);
-    padding-top: var(--indent-extrasmall);
-    padding-bottom: var(--indent-extrasmall);
+    padding-top: var(--indent-x-x-small);
+    padding-bottom: var(--indent-x-x-small);
     margin-bottom: 0;
 }
 
@@ -254,8 +255,8 @@ nav > ul{
 
 nav ul img{
     width: 100%;
-    padding-top: var(--indent-small);
-    padding-bottom: var(--indent-small);
+    padding-top: var(--indent-x-small);
+    padding-bottom: var(--indent-x-small);
 }
 
 nav ul .active {
@@ -334,7 +335,7 @@ pre {
     font-size: var(--body--medium);
     font-weight: var(--weight--bold);
     color: var(--main--light);
-    padding-left: var(--indent-small);
+    padding-left: var(--indent-x-small);
     display: flex;
     align-items: center;
 }
