@@ -219,6 +219,7 @@ aside{
     /*position: -webkit-sticky; /*для сафари*/
     top: 0;
     flex: 0 0 var(--grid-side-menu);
+    height: 100vh;
 }
 
 nav > ul{
