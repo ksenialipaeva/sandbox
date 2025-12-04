@@ -5,18 +5,32 @@ body.append(decoration);
 
 /* Добавляем боковое меню */
 let sidebar = [
-    ['styles',
+    ['стили',
         [
             ['О системе','about.html'],
             ['Цвета','colors.html'],
             ['Сетка','grid.html'],
-            ['Типографика','typography.html'],
-            ['Язык','language.html']
+            ['Типографика','typography.html']
         ]],
-    ['atoms',
+    ['атомы',
         [
             ['Чекбоксы','checkboxes.html'],
-            ['Радиобаттоны','radiobuttons.html']
+            ['Радиобаттоны','radiobuttons.html'],
+            ['Тогглы','toggles.html']
+        ]],
+    ['молекулы',
+        [
+            ['Поля ввода','inputs.html'],
+            ['Кнопки','buttons.html'],
+            ['Бейджи','badges.html'],
+            ['Чипы','chips.html'],
+            ['Хлебные крошки','breadcrumbs.html']
+        ]],
+    ['организмы',
+        [
+            ['Таблицы','tables.html'],
+            ['Модальные окна','modals.html'],
+            ['Боковое меню','sidemenu.html']
         ]]
 ]
 

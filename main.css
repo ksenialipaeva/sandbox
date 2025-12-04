@@ -77,7 +77,7 @@
 
 /* Text-size styles */
 /* base size: body--small (16px) */
---sidemenu: 0.5rem;
+
 --caption: 0.75rem;
 --title--h1: 4rem;
 --title--h2: 2.25rem;
@@ -99,12 +99,15 @@
 --grid-4: calc(var(--grid-1)*4 + var(--grid-gap)*3);
 --grid-5: calc(var(--grid-1)*5 + var(--grid-gap)*4);
 --grid-6: calc(var(--grid-1)*6 + var(--grid-gap)*5);
---grid-side-menu: 200px;
+--grid-side-menu: 250px;
 
 /* Отступы */
+--sidemenu: 0rem;
 --indent-extrasmall: 0.5rem; /*8px*/
 --indent-small: 0.75rem; /*12px*/
+--indent-base: 1rem;
 --indent-medium: 1.25rem; /*20px*/
+--indent-sidemenu: 1.5rem;
 
 /* Радиусы */
 --radius-large: 1.25rem; /*20px*/
@@ -218,27 +221,30 @@ aside{
 }
 
 nav > ul{
-    padding-inline-start: 24px;
-    padding-inline-end: 24px;
-    padding-top: 48px;
+    padding-inline-start: var(--indent-sidemenu);
+    padding-inline-end: var(--indent-sidemenu);
+    padding-top: var(--sidemenu);
 }
 
+/* подзаголовки */
 .side-menu-heading, aside > nav > ul > li{
     list-style: none;
     color: var(--brand--brand);
-    font-size: var(--body--medium);
+    font-size: var(--body--small);
     font-weight: var(--weight--bold);
     padding-top: var(--sidemenu);
     padding-bottom: var(--sidemenu);
+    margin-bottom: 0;
 }
 
 .side-menu-element, aside > nav > ul > li > ul > li{
     list-style: none;
     color: var(--main--dark);
-    font-size: var(--body--medium);
+    font-size: var(--body--small);
     font-weight: var(--weight--regular);
-    padding-top: var(--sidemenu);
-    padding-bottom: var(--sidemenu);
+    padding-top: var(--indent-extrasmall);
+    padding-bottom: var(--indent-extrasmall);
+    margin-bottom: 0;
 }
 
 .side-menu-element > a, aside > nav > ul > li > ul > li > a {
@@ -248,8 +254,8 @@ nav > ul{
 
 nav ul img{
     width: 100%;
-    padding-top: var(--sidemenu);
-    padding-bottom: 20px;
+    padding-top: var(--indent-small);
+    padding-bottom: var(--indent-small);
 }
 
 nav ul .active {
