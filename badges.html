@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Бейджи</title>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="instruction.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!--Подсветка синтаксиса-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/shades-of-purple.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+<main>
+<h1>Бейджи</h1>
+<p class="large-text">Бейджи используются для разделения однотипных элементов по&nbsp;свойству, например, разделение игр по&nbsp;необходимому количеству игроков в&nbsp;команде.</p>
+<h2>Спецификация</h2>
+<h3>Цвет</h3>
+<p class="medium-text">С&nbsp;помощью цвета пользователю легче считывать бейджи. Поэтому для бейджей в&nbsp;рамках одного элемента необходимо использовать цвета в&nbsp;порядке: Brand&nbsp;1, Brand&nbsp;2, Brand&nbsp;3, Brand. Основной брендовый цвет используется только при необходимости, чтобы максимально отличить бейджи как некликабельные элементы от&nbsp;интерактивных элементов страницы.</p>
+<h3>Размер и контейнер</h3>
+<p class="medium-text">Рекомендуется использовать размер Medium и&nbsp;отображать бейджи строкой. Размер Small используется только в&nbsp;случае, когда размер Medium слишком большой.</p>
+<h3>Содержание</h3>
+<p class="medium-text">Рекомендуется создавать бейджи не&nbsp;длиннее 19&nbsp;символов. Лучше использовать слова или словосочетания и&nbsp;не&nbsp;использовать предложения, знаки препинания и&nbsp;названия компаний.</p>
+<h3>Верстка</h3>
+<p class="medium-text">Бейджи - это строковый элемент, поэтому они располагаются друг за другом и переносятся на следующую строку как текст. Они выравниваются по левому краю. Рекомендуется не использовать для одного элемента больше трёх бейджей.</p>
+<p class="medium-text">Вертикальный и&nbsp;горизонтальный промежуток:</p>
+<ul>
+    <li>8px для Medium</li>
+    <li>4px для Small</li>
+</ul>
+<h2>Анатомия</h2>
+<img src="images/badges/anatomy.png">
+<!-- Страшный интерактив-->
+<article class="code-container">
+<pre><code class="language-html">&lt;body&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+&lt;/body&gt;</code></pre>
+</article>
+<pre><code class="language-css">.punctuation {    color: black;}
+.bracket {    color: blue;}
+.css .property { color:22px;}
+.css .numerical { color:seagreen;}
+.css .letter { color:cornflowerblue;}
+</code></pre>
+</main>
+<script src="article.js"></script>
+<script src="showcode.js"></script>
+</body>
+</html>
