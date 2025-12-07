@@ -1,9 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
-setAutoCopyFeatures(); // Инициализация скрипта для копирования кода
-
-function setAutoCopyFeatures() {
-
-    function create(htmlStr) { // Вспомогательная функция для создания DOM-элемента
+function create(htmlStr) { // Вспомогательная функция для создания DOM-элемента
         var frag = document.createDocumentFragment(),
             temp = document.createElement('div');
         temp.innerHTML = htmlStr;
@@ -17,8 +12,7 @@ function setAutoCopyFeatures() {
     let precode = document.querySelectorAll('pre code');
     
     for( let i = 0; i < precode.length; i++ ) { // Добавление кнопки к каждому блоку pre code
-        //let fragment = create('<button class="js-copy-btn">Копировать<svg class="icon-copy" role="img" aria-label="Скопировать в буфер обмена"><title>Копировать</title></svg></button>');
-        let fragment = create('<button class="js-copy-btn"><img src="images/icons/copy.svg"> Копировать</button>');
+        let fragment = create('<button class="js-copy-btn empty-button medium-button"><img src="images/icons/copy.svg"> Копировать</button>');
         let parentDiv = precode[i].parentNode;
         parentDiv.insertBefore(fragment, precode[i]);
 
@@ -43,23 +37,28 @@ function setAutoCopyFeatures() {
 
         }
     }
-    insertButtonCopy();
-    onclick_copyFrom();
+let listenerCopy = function (copy,copied,cont,message){
+	return function f() {
+    
+        let parentDiv = copy.parentNode;
+        let childCheck = parentDiv.querySelector('.js-copy-done');
+        if(childCheck) return; // Если еще существует .js-copy-done, то прерываем (проверка на двойное нажатие)
+        
+        copyToClipboard(copied);
+        ui_copyDone(cont,message);
+    }
+}
 
     function onclick_copyFrom() {
     let btn = document.querySelectorAll('.js-copy-btn');
 
-    for( let i = 0; i < btn.length; i++ ) {
-      btn[i].addEventListener('click', function() {
-        let parentDiv = this.parentNode;
-        let childCheck = parentDiv.querySelector('.js-copy-done');
-        if(childCheck) return; // Если еще существует .js-copy-done, то прерываем (проверка на двойное нажатие)
 
-        let copyCode = this.nextSibling;
-        
-        copyToClipboard(copyCode.textContent);
-        ui_copyDone(this);
-      });
+
+for( let i = 0; i < btn.length; i++ ) {
+    let copied = btn[i].nextSibling.textContent;
+    let popContainer = btn[i].parentNode;
+
+    btn[i].addEventListener('click', listenerCopy(btn[i],copied,popContainer,"Код скопирован")); //(на что нажимают, откуда копируют, где появляется надпись, что содержит надпись)
     }
     }
 
@@ -74,31 +73,47 @@ function setAutoCopyFeatures() {
         document.body.removeChild(area);
     }
 
-    function ui_copyDone(btn) {
-        var doneElement = create('<div class="js-copy-done">Скопировано</div>');
-        let parentDiv = btn.parentNode;
-        parentDiv.insertBefore(doneElement, btn);
-        var insertedElement = parentDiv.querySelector('.js-copy-done');
+    function ui_copyDone(container,message) {
+        
+        var doneElement = create('<div class="js-copy-done">'+message+'</div>');
+        
+        
+        container.prepend(doneElement);
+        //var insertedElement = container.querySelector('.js-copy-done');
 
-        if(parentDiv.scrollTop > 0) { // Если была прокрутка, то сдвигаем к центру (горизонталь)
-            insertedElement.style.top = parentDiv.scrollTop+(parentDiv.getBoundingClientRect().height/2)+"px";
+        /*if(container.scrollTop > 0) { // Если была прокрутка, то сдвигаем к центру (горизонталь)
+            insertedElement.style.top = container.scrollTop+(container.getBoundingClientRect().height/2)+"px";
         }
-        if(parentDiv.scrollLeft > 0) { // Если была прокрутка, то сдвигаем к центру (вертикаль)
-            insertedElement.style.left = parentDiv.scrollLeft+(parentDiv.clientWidth/2)+"px";
-        }
+        if(container.scrollLeft > 0) { // Если была прокрутка, то сдвигаем к центру (вертикаль)
+            insertedElement.style.left = container.scrollLeft+(container.clientWidth/2)+"px";
+        }*/
 
         setTimeout(function() { // Пауза перед исчезновением
-            var child = parentDiv.querySelector('.js-copy-done');
-            child.classList.add('faded');
+            var child = container.querySelector('.js-copy-done');
+            //child.classList.add('faded');
             removeCopyDone(child);
         }, 500);
 
         function removeCopyDone(child) {
+            
             setTimeout(function() {
-                parentDiv.removeChild(child);
+                container.removeChild(child);
             }, 500);
         }
     }
+
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+setAutoCopyFeatures(); // Инициализация скрипта для копирования кода
+
+
+
+function setAutoCopyFeatures() {
+
+    
+    insertButtonCopy();
+    onclick_copyFrom();
+
 }
 
 });

@@ -87,6 +87,8 @@
 --body--medium: 1.25rem;
 --body--small: 1rem;
 
+--paragraph--line: 150%;
+
 --weight--bold: 800;
 --weight--regular: 500;
 
@@ -106,7 +108,7 @@
 --indent-x-x-x-small: 0.25rem; /*4px*/
 --indent-x-x-small: 0.5rem; /*8px*/
 --indent-x-small: 0.75rem; /*12px*/
---indent-small-new: 1rem; /*16px*/
+--indent-small: 1rem; /*16px*/
 --indent-medium: 1.25rem; /*20px*/
 --indent-large: 1.5rem; /*24px*/
 
@@ -196,7 +198,7 @@ p.small-text,a.small-text, li.small-text {
     margin-bottom: var(--caption);
 }
 
-p,a {line-height: 150%;}
+p,a {line-height: var(--paragraph--line);}
 
 /*||| Декорация типографики*/
 b, strong, .side-menu>a, h1, h2, h3, h4  {
@@ -361,33 +363,23 @@ pre {
 /** ||| JS copy Code **/
 
 .js-copy-btn {
-position:absolute;
-right: 0;
-bottom: 0;
-z-index: 2;
-padding: 0.75rem;
-}
-
-pre:hover .js-copy-btn {
-  opacity: 0.2;
-}
-
-pre .js-copy-btn:hover {
-  opacity: 0.4;
-  cursor: pointer;
-  cursor: hand;
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 0.75rem;
 }
 
 .js-copy-done {
-position: absolute;
-left: 50%;
-transform: translate(-50%, -50%);
-top: 50%;
-background-color: rgba(0, 0, 0, 0.6);
-color: white;
-padding: .75rem 1.5rem;
-border-radius: 3px;
-transition: opacity 0.5s;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: .75rem 1.5rem;
+    border-radius: 3px;
+    transition: opacity 0.5s;
 }
 
 /*.js-copy-done.faded {
@@ -419,4 +411,36 @@ opacity: 0;
 .interactive-container ul {
     padding-left: 0;
     margin:0;
+}
+
+/*||| Миниатюры цветов*/
+.colors-container {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    gap: var(--indent-large);
+}
+.colors-container > li > div {
+    width: 76px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    border-radius:  12px 12px 12px 0;
+}
+.colors-container div > span {
+    position: absolute;
+    top:10%;
+    right: 10%;
+    background-color: var(--main--light);
+    font-size: var(--body--small);
+    border-radius: 4px;
+    padding: 0 5px;
+}
+.colors-container > li {
+    display:grid;
+    gap:var(--indent-x-x-x-small);
+}
+.colors-container * {
+    font-size: var(--body--small);
 }
