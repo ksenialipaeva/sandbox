@@ -114,6 +114,8 @@
 
 /* Радиусы */
 --radius-large: 1.25rem; /*20px*/
+--radius-small: 0.75rem; /*12px*/
+--radius-extrasmall: 0.5rem; /*8px*/
 
 }
 
@@ -186,14 +188,14 @@ p.large-text,a.large-text,.side-menu>a,li.large-text {
     font-size: var(--body--large);
     margin-bottom: var(--body--medium);
 }
-p.medium-text,a.medium-text, code, li {
+p.medium-text,a.medium-text, code, li, input::placeholder {
     font-size: var(--body--medium);
     margin-bottom: var(--body--small);
 }
 code {
     margin-bottom:0;
 }
-p.small-text,a.small-text, li.small-text {
+p.small-text,a.small-text, li.small-text, .input-wrapper>label, .input-wrapper>>span {
     font-size: var(--body--small);
     margin-bottom: var(--caption);
 }
@@ -443,4 +445,35 @@ opacity: 0;
 }
 .colors-container * {
     font-size: var(--body--small);
+}
+
+input[type=text] {
+    border:none;
+    width: 100%;
+    background-color: var(--main--light);
+}
+input[type=text]:active {
+    outline: none;
+}
+label {
+    margin-bottom: var(--indent-x-x-small);
+}
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.input-wrapper>div:first-of-type {
+    border: solid black 2px;
+}
+.input-wrapper>div {
+    padding: var(--indent-x-x-small) var(--indent-x-x-small);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--indent-x-x-x-small);
+    border-radius: var(--radius-small);
+    align-items: center;
+}
+.input-wrapper>div>div>img {
+    height: 16px;
 }

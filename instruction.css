@@ -108,7 +108,7 @@
 /* Радиусы */
 --radius-large: 1.25rem; /*20px*/
 --radius-small: 0.75rem; /*12px*/
---radius-extrasmall: 0.5rem; /*12px*/
+--radius-extrasmall: 0.5rem; /*8px*/
 }
 
 .advise, .example-container, .illustration-container {
@@ -268,15 +268,15 @@ button:hover, button:active {
     color: var(--brand--brand--40-d);
 }
 
-.empty-button {
+.empty-button, .input-wrapper button {
     background-color:transparent;
     border: none;
     color: var(--brand--brand)
 }
-.empty-button:hover {
+.empty-button:hover, .input-wrapper button:hover {
     color: var(--brand--brand--70-d);
 }
-.empty-button:active {
+.empty-button:active, , .input-wrapper button:active {
     color: var(--brand--brand--40-d);
 }
 
