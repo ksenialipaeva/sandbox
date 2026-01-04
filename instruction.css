@@ -219,30 +219,90 @@
     margin-top: var(--indent-medium);
 }
 
-.large-button {border-width: 2.5px}
-.medium-button {border-width: 2.25px}
-.small-button {border-width: 2px}
+/*||| Кнопки */
 
+button {
+    display: flex;
+    align-items: center;
+}
 button:hover, button:active {
     cursor: pointer;
 }
 
+
+/*Размеры*/
+
+/*Размеры общие*/
 .large-button {
     padding: var(--indent-x-small) var(--indent-medium);
     border-radius: var(--radius-large);
     font-size: var(--body--large);
+    border-width: 2.5px;
 }
 .medium-button {
     padding: var(--indent-x-x-small) var(--indent-small);
     border-radius: var(--radius-small);
     font-size: var(--body--medium);
+    border-width: 2.25px;
 }
 .small-button {
     padding: var(--indent-x-x-x-small) var(--indent-x-x-small);
     border-radius: var(--radius-extrasmall);
     font-size: var(--body--small);
+    border-width: 2px;
 }
 
+/*Размеры кнопок с иконками*/
+.large-button img {
+    height: var(--body--large);
+}
+.medium-button img {
+    height: var(--body--medium);
+}
+.small-button img {
+    height: var(--body--small);
+}
+
+.large-button.icon-left-button {
+    padding-left: var(--indent-x-small);
+    gap: var(--indent-x-x-small);
+}
+.large-button.icon-right-button {
+    padding-right: var(--indent-x-small);
+    gap: var(--indent-x-x-small);
+}
+.large-button.icon-only-button {
+    padding-left: var(--indent-x-small);
+    padding-right: var(--indent-x-small);
+}
+
+.medium-button.icon-left-button {
+    padding-left: var(--indent-x-x-small);
+    gap: var(--indent-x-x-x-small);
+}
+.medium-button.icon-right-button {
+    padding-right: var(--indent-x-x-small);
+    gap: var(--indent-x-x-x-small);
+}
+.medium-button.icon-only-button {
+    padding-right: var(--indent-x-x-small);
+    padding-left: var(--indent-x-x-small);
+}
+
+.small-button.icon-left-button {
+    padding-left: var(--indent-x-x-x-small);
+    gap: var(--indent-x-x-x-small);
+}
+.small-button.icon-right-button {
+    padding-right: var(--indent-x-x-x-small);
+    gap: var(--indent-x-x-x-small);
+}
+.small-button.icon-only-button {
+    padding-right: var(--indent-x-x-x-small);
+    padding-left: var(--indent-x-x-x-small);
+}
+
+/*Стили*/
 .primary-button {
     background-color: var(--brand--brand);
     border: none;
@@ -258,7 +318,16 @@ button:hover, button:active {
     border-color: var(--brand--brand);
     color: var(--brand--brand);
 }
+.secondary-button img {
+    filter: invert(0.7) sepia(1) saturate(5) hue-rotate(245deg);
+}
 
+.secondary-button:hover img {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(230deg) brightness(0.6);
+}
+.secondary-button:active img {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(230deg) brightness(0.4);
+}
 .secondary-button:hover {    
     border-color: var(--brand--brand--70-d);
     color: var(--brand--brand--70-d);
@@ -276,7 +345,7 @@ button:hover, button:active {
 .empty-button:hover, .input-wrapper button:hover {
     color: var(--brand--brand--70-d);
 }
-.empty-button:active, , .input-wrapper button:active {
+.empty-button:active, .input-wrapper button:active {
     color: var(--brand--brand--40-d);
 }
 
