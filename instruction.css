@@ -342,6 +342,16 @@ button:hover, button:active {
     border: none;
     color: var(--brand--brand)
 }
+.empty-button img {
+    filter: invert(0.7) sepia(1) saturate(5) hue-rotate(245deg);
+}
+
+.empty-button:hover img {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(230deg) brightness(0.6);
+}
+.empty-button:active img {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(230deg) brightness(0.4);
+}
 .empty-button:hover, .input-wrapper button:hover {
     color: var(--brand--brand--70-d);
 }
