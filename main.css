@@ -253,7 +253,11 @@ nav > ul{
     margin-bottom: 0;
 }
 
-.side-menu-element > a, aside > nav > ul > li > ul > li > a {
+.side-menu-element, aside > nav > ul > li > ul {
+    padding-bottom: var(--indent-x-x-small);
+}
+
+.side-menu-element > a, aside > nav > ul > li > ul > li > a, aside a:visited {
     text-decoration: none;
     color: var(--main--dark);
 }
@@ -265,7 +269,6 @@ nav ul img{
 }
 
 nav ul .active {
-    text-decoration: underline;
     font-weight: var(--weight--bold);
 }
 
