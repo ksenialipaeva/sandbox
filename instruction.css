@@ -219,6 +219,10 @@
     margin-top: var(--indent-medium);
 }
 
+.hide {
+    display: none;
+}
+
 /*||| Кнопки */
 
 button {
@@ -263,11 +267,11 @@ button:hover, button:active {
     height: var(--body--small);
 }
 
-.large-button.icon-left-button {
+.large-button.icon-left-button, .large-button.icon-both-button {
     padding-left: var(--indent-x-small);
     gap: var(--indent-x-x-small);
 }
-.large-button.icon-right-button {
+.large-button.icon-right-button, .large-button.icon-both-button {
     padding-right: var(--indent-x-small);
     gap: var(--indent-x-x-small);
 }
@@ -276,11 +280,11 @@ button:hover, button:active {
     padding-right: var(--indent-x-small);
 }
 
-.medium-button.icon-left-button {
+.medium-button.icon-left-button, .medium-button.icon-both-button {
     padding-left: var(--indent-x-x-small);
     gap: var(--indent-x-x-x-small);
 }
-.medium-button.icon-right-button {
+.medium-button.icon-right-button, .medium-button.icon-both-button {
     padding-right: var(--indent-x-x-small);
     gap: var(--indent-x-x-x-small);
 }
@@ -289,11 +293,11 @@ button:hover, button:active {
     padding-left: var(--indent-x-x-small);
 }
 
-.small-button.icon-left-button {
+.small-button.icon-left-button, .small-button.icon-both-button {
     padding-left: var(--indent-x-x-x-small);
     gap: var(--indent-x-x-x-small);
 }
-.small-button.icon-right-button {
+.small-button.icon-right-button, .small-button.icon-both-button {
     padding-right: var(--indent-x-x-x-small);
     gap: var(--indent-x-x-x-small);
 }

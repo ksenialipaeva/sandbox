@@ -82,7 +82,9 @@ for (let j=0; j<sidebar.length; j++) {
     //заполняем страницы
     let isActive;
     for (let i=0; i<sidebar[j][1].length; i++) {
-        if (sidebar[j][1][i].includes(page)) isActive=true;
+        if (sidebar[j][1][i].includes(page)) {
+            isActive=true;
+        }
         else isActive = false;
         createNameLinkAppend(sidebar[j][1][i][0],sidebar[j][1][i][1],sidebar_section,isActive);
     }

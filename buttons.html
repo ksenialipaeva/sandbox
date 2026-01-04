@@ -71,8 +71,85 @@
     <img src="images/icons/copy.svg">Копировать<img src="images/icons/copy.svg">
 </button>
 <button class="small-button empty-button">Копировать</button>
+
+
+<section class="interactive-container" id="button">
+        <form class="grid2">
+            <article>
+                <label for="state-select">Состояние</label>
+                <select name="state" id="state-select">
+                    <option selected="selected" value="default">Default</option>
+                    <option value="hover">Hover</option>
+                    <option value="active">Active</option>
+                    <option value="disabled">Disabled</option>
+                </select>
+            </article>
+            <article>
+                <label for="size-select">Размер</label>
+                <select name="size" id="size-select">
+                    <option value="large">Large</option>
+                    <option selected="selected" value="medium">Medium</option>
+                    <option value="small">Small</option>
+                </select>
+            </article>
+            <article>
+                <label for="style-select">Стиль</label>
+                <select name="style" id="style-select">
+                    <option selected="selected" value="primary">Primary</option>
+                    <option value="secondary">Secondary</option>
+                    <option value="empty">Empty</option>
+                </select>
+            </article>    
+            <article>
+                <label for="icon-select">Иконки</label>
+                <select name="icon" id="icon-select">
+                    <option value='icon-left 1 2'>Left icon</option>
+                    <option value="icon-right 2 3">Right icon</option>
+                    <option selected="selected" value="icon-both 1 2 3">Both icon</option>
+                    <option value="icon-only 1">Icon only</option>
+                </select>
+            </article>     
+        </form>
+        <section class="grid2" id="element-example">
+            <button class="medium-button primary-button icon-left-button icon-right-button">
+                <img class="toggle" src='images/icons/copy.svg'> 
+                <span class="toggle">Кнопка</span>
+                <img class="toggle" src='images/icons/copy.svg'> 
+            </button>
+        </section>
+        <ul class="grid2">
+            <li>
+                <strong>text-style</strong>
+                <span>medium</span>
+            </li>
+            <li>
+                <strong>text-style</strong>
+                <span>medium</span>
+            </li>
+            <li>
+                <strong>text-style</strong>
+                <span>medium</span>
+            </li>
+            <li>
+                <strong>text-style</strong>
+                <span>medium</span>
+            </li>
+            <li>
+                <strong>text-style</strong>
+                <span>medium</span>
+            </li>
+            <li>
+                <strong>text-style</strong>
+                <span>medium</span>
+            </li>
+        </ul>
+    </section>
+
+
 </main>
+
 <script src="article.js"></script>
 <script src="showcode.js"></script>
+<script src="interactive.js"></script>
 </body>
 </html>

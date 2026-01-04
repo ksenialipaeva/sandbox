@@ -195,7 +195,7 @@ p.medium-text,a.medium-text, code, li, input::placeholder {
 code {
     margin-bottom:0;
 }
-p.small-text,a.small-text, li.small-text, .input-wrapper>label, .input-wrapper>>span {
+p.small-text,a.small-text, li.small-text, .input-wrapper>label, .input-wrapper>span {
     font-size: var(--body--small);
     margin-bottom: var(--caption);
 }
