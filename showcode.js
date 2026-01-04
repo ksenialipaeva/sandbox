@@ -12,7 +12,7 @@ function create(htmlStr) { // Вспомогательная функция дл
     let precode = document.querySelectorAll('pre code');
     
     for( let i = 0; i < precode.length; i++ ) { // Добавление кнопки к каждому блоку pre code
-        let fragment = create('<button class="js-copy-btn empty-button medium-button"><img src="images/icons/copy.svg"> Копировать</button>');
+        let fragment = create('<button class="js-copy-btn empty-button large-button icon-only-button"><img src="images/icons/copy.svg"></button>');
         let parentDiv = precode[i].parentNode;
         parentDiv.insertBefore(fragment, precode[i]);
 

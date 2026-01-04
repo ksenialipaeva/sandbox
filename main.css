@@ -369,8 +369,8 @@ pre {
 
 .js-copy-btn {
     position:absolute;
-    right: 0;
-    bottom: 0;
+    right: var(--indent-x-small);
+    top: var(--indent-x-small);
     z-index: 2;
     padding: 0.75rem;
 }
