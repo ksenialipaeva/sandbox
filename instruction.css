@@ -311,7 +311,7 @@ select {
     padding-right: var(--indent-x-small);
 }
 
-.medium-button.icon-left-button, .medium-button.icon-both-button, .select-container div  {
+.medium-button.icon-left-button, .medium-button.icon-both-button, .select-container.icon-left-select div  {
     padding-left: var(--indent-x-x-small);
     gap: var(--indent-x-x-x-small);
 }
@@ -394,3 +394,8 @@ select {
     color: var(--brand--brand--40-d);
 }
 
+/* ||| Чекбоксы*/
+[type="checkbox"]
+{
+    vertical-align:middle;
+}

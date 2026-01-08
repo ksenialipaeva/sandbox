@@ -140,6 +140,7 @@ main {
     max-width: var(--grid-6);
     width: var(--grid-6);
     margin:0 auto;
+    margin-bottom: 100px;
 }
 /*||| Шрифты*/
 body * {font-family: "Nunito", sans-serif;}

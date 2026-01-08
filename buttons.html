@@ -47,30 +47,8 @@
         <p class="medium-text">Кнопки полностью наследуют стили у&nbsp;наборного текста. Текст должен быть написан с&nbsp;большой буквы, остальные буквы должны быть строчными.</p>
 <!-- Страшный интерактив-->
 
-<article class="code-container">
-<pre><code class="language-html">&lt;body&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
-&lt;/body&gt;</code></pre>
-</article>
-<pre><code class="language-css">.punctuation {    color: black;}
-.bracket {    color: blue;}
-.css .property { color:22px;}
-.css .numerical { color:seagreen;}
-.css .letter { color:cornflowerblue;}
-</code></pre>
-<button class="small-button secondary-button icon-only-button">
-    <img src="images/icons/copy.svg">
-</button>
-<button class="medium-button empty-button icon-left-button">
-    <img src="images/icons/copy.svg">Копировать
-</button>
-<button class="small-button empty-button icon-right-button">
-    Копировать<img src="images/icons/copy.svg">
-</button>
-<button class="large-button secondary-button icon-left-button icon-right-button">
-    <img src="images/icons/copy.svg">Копировать<img src="images/icons/copy.svg">
-</button>
-<button class="small-button empty-button">Копировать</button>
+
+
 
 
 <section class="interactive-container" id="button">
@@ -78,7 +56,6 @@
             <div class="select-container">
                 <label for="size-select">Размер</label>
                 <div>
-                    <img src="images/icons/copy.svg">
                     <select name="size" id="size-select">
                         
                         <option value="large">Large</option>
@@ -86,24 +63,27 @@
                         <option value="small">Small</option>
                     </select>
                 </div>
-                
             </div>
-            <div>
+            <div class="select-container">
                 <label for="style-select">Стиль</label>
-                <select name="style" id="style-select">
-                    <option selected="selected" value="primary">Primary</option>
-                    <option value="secondary">Secondary</option>
-                    <option value="empty">Empty</option>
-                </select>
+                <div>
+                    <select name="style" id="style-select">
+                        <option selected="selected" value="primary">Primary</option>
+                        <option value="secondary">Secondary</option>
+                        <option value="empty">Empty</option>
+                    </select>
+                </div>
             </div>    
-            <div>
+            <div class="select-container">
                 <label for="icon-select">Иконки</label>
-                <select name="icon" id="icon-select">
-                    <option value='icon-left 1 2'>Left icon</option>
-                    <option value="icon-right 2 3">Right icon</option>
-                    <option selected="selected" value="icon-both 1 2 3">Both icon</option>
-                    <option value="icon-only 1">Icon only</option>
-                </select>
+                <div>
+                    <select name="icon" id="icon-select">
+                        <option value='icon-left 1 2'>Left icon</option>
+                        <option value="icon-right 2 3">Right icon</option>
+                        <option selected="selected" value="icon-both 1 2 3">Both icon</option>
+                        <option value="icon-only 1">Icon only</option>
+                    </select>
+                </div>
             </div>     
         </form>
         <section class="grid3" id="element-example">
@@ -140,6 +120,20 @@
             </li>
         </ul-->
     </section>
+    
+<article class="code-container">
+<pre><code class="language-html">&lt;body&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+&lt;/body&gt;</code></pre>
+</article>
+<article class="code-container">
+<pre><code class="language-css">.punctuation {    color: black;}
+.bracket {    color: blue;}
+.css .property { color:22px;}
+.css .numerical { color:seagreen;}
+.css .letter { color:cornflowerblue;}
+</code></pre>
+</article>
 
 
 </main>
