@@ -232,7 +232,37 @@ button {
 button:hover, button:active {
     cursor: pointer;
 }
-
+.select-container {
+    display: flex;
+    flex-direction: column;
+    margin: var(--indent-x-x-small) var(--indent-x-x-small);
+}
+.select-container label {
+    margin-left: var(--indent-medium);
+}
+.select-container div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.select-container button {
+    width: min-content;
+}
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    width: 100%;
+    font-size: var(--body--medium);
+    background-color: var(--main--light)
+    padding-right: 15px; 
+    /* apply SVG with arrow */
+    /* change width value to move arrow to the left */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 15 15"><path d="M 8,5.5 11,9.5 14,5.5 z"></path></svg>');
+    background-repeat: no-repeat;
+    background-position: center right;
+}
 
 /*Размеры*/
 
@@ -243,12 +273,13 @@ button:hover, button:active {
     font-size: var(--body--large);
     border-width: 2.5px;
 }
-.medium-button {
+.medium-button, .select-container div {
     padding: var(--indent-x-x-small) var(--indent-small);
     border-radius: var(--radius-small);
     font-size: var(--body--medium);
     border-width: 2.25px;
-}
+} 
+
 .small-button {
     padding: var(--indent-x-x-x-small) var(--indent-x-x-small);
     border-radius: var(--radius-extrasmall);
@@ -260,7 +291,7 @@ button:hover, button:active {
 .large-button img {
     height: var(--body--large);
 }
-.medium-button img {
+.medium-button img, .select-container>div>img {
     height: var(--body--medium);
 }
 .small-button img {
@@ -280,7 +311,7 @@ button:hover, button:active {
     padding-right: var(--indent-x-small);
 }
 
-.medium-button.icon-left-button, .medium-button.icon-both-button {
+.medium-button.icon-left-button, .medium-button.icon-both-button, .select-container div  {
     padding-left: var(--indent-x-x-small);
     gap: var(--indent-x-x-x-small);
 }
@@ -316,13 +347,13 @@ button:hover, button:active {
 .primary-button:hover {    background-color: var(--brand--brand--70-d);}
 .primary-button:active {    background-color: var(--brand--brand--40-d);}
 
-.secondary-button {
+.secondary-button, .select-container div {
     background-color:transparent;
     border-style: solid;
     border-color: var(--brand--brand);
     color: var(--brand--brand);
 }
-.secondary-button img {
+.secondary-button img, .select-container img {
     filter: invert(0.7) sepia(1) saturate(5) hue-rotate(245deg);
 }
 
@@ -332,11 +363,11 @@ button:hover, button:active {
 .secondary-button:active img {
     filter: invert(0.5) sepia(1) saturate(5) hue-rotate(230deg) brightness(0.4);
 }
-.secondary-button:hover {    
+.secondary-button:hover, .select-container:hover div {    
     border-color: var(--brand--brand--70-d);
     color: var(--brand--brand--70-d);
 }
-.secondary-button:active {    
+.secondary-button:active, .select-container:active div {    
     border-color: var(--brand--brand--40-d);
     color: var(--brand--brand--40-d);
 }
