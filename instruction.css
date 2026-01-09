@@ -255,10 +255,8 @@ select {
     border: none;
     width: 100%;
     font-size: var(--body--medium);
-    background-color: var(--main--light)
-    padding-right: 15px; 
-    /* apply SVG with arrow */
-    /* change width value to move arrow to the left */
+    background-color: var(--main--light);
+    padding-right: 15px;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 15 15"><path d="M 8,5.5 11,9.5 14,5.5 z"></path></svg>');
     background-repeat: no-repeat;
     background-position: center right;
@@ -307,8 +305,7 @@ select {
     gap: var(--indent-x-x-small);
 }
 .large-button.icon-only-button {
-    padding-left: var(--indent-x-small);
-    padding-right: var(--indent-x-small);
+    padding: var(--indent-small);
 }
 
 .medium-button.icon-left-button, .medium-button.icon-both-button, .select-container.icon-left-select div  {
@@ -320,8 +317,7 @@ select {
     gap: var(--indent-x-x-x-small);
 }
 .medium-button.icon-only-button {
-    padding-right: var(--indent-x-x-small);
-    padding-left: var(--indent-x-x-small);
+    padding: var(--indent-x-small);
 }
 
 .small-button.icon-left-button, .small-button.icon-both-button {
@@ -333,8 +329,7 @@ select {
     gap: var(--indent-x-x-x-small);
 }
 .small-button.icon-only-button {
-    padding-right: var(--indent-x-x-x-small);
-    padding-left: var(--indent-x-x-x-small);
+    padding: var(--indent-x-x-small);
 }
 
 /*Стили*/
@@ -398,4 +393,8 @@ select {
 [type="checkbox"]
 {
     vertical-align:middle;
+}
+
+label:has([type="checkbox"]) {
+    font-size: var(--body--medium);
 }

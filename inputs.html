@@ -315,42 +315,59 @@
 
             
             <label for="label">
-                <input type="checkbox" class="toggle" id="label">
+                <input type="checkbox" id="label" checked="true" >
                 Название поля
             </label>  
 
-            <input type="checkbox" class="toggle" id="icon-main">
             <label for="icon-main">
+                <input type="checkbox" id="icon-main" checked="true">
                 Иконка содержания
             </label>  
 
-            <input type="checkbox" class="toggle" id="button">
             <label for="button">
+                <input type="checkbox" id="button" checked="true">
                 Кнопка
             </label>  
 
-            <input type="checkbox" class="toggle" id="description">
+            
             <label for="description">
+                <input type="checkbox" id="description" checked="true">
                 Описание
             </label>
 
-            <input type="checkbox" class="toggle" id="icon-description">
+            
             <label for="icon-description">
+                <input type="checkbox" id="icon-description" checked="true">
                 Иконка описания
             </label>   
 
-            <input type="checkbox" class="toggle" id="count">
+            
             <label for="count">
+                <input type="checkbox" id="count" checked="true">
                 Подсчет символов
             </label> 
 
         </form>
         <section class="grid3" id="element-example">
-            <button class="medium-button primary-button icon-left-button icon-right-button">
-                <img class="toggle" src='images/icons/copy.svg'> 
-                <span class="toggle">Кнопка</span>
-                <img class="toggle" src='images/icons/copy.svg'> 
-            </button>
+        <div class="input-wrapper grid2">
+            <label class="toggle" for="name">Название поля</label>
+            <div>
+                <img src="images/icons/warning-circle.svg" class="toggle">
+                <input autocomplete="off" placeholder="Плейсхолдер" type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
+                <button class="toggle"> <img src="images/icons/warning-circle.svg"> </button>
+            </div>
+            <div>
+                <div class="toggle">
+                    <img src="images/icons/warning-circle.svg" class="toggle">
+                    <span>Описание поля</span>
+                </div>
+                <div class="toggle">
+                    <span>0</span>
+                    <span>/</span>
+                    <span>20</span>
+                </div>
+            </div>
+        </div>
         </section>
         <!--ul class="grid2">
             <li>
@@ -403,5 +420,6 @@
 </main>
 <script src="article.js"></script>
 <script src="showcode.js"></script>
+<script src="interactive.js"></script>
 </body>
 </html>
