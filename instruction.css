@@ -300,6 +300,7 @@ select {
 /*Размеры кнопок с иконками*/
 .large-button img {
     height: var(--body--large);
+    stroke-width: 10px;
 }
 .medium-button img, .select-container>div>img {
     height: var(--body--medium);
@@ -401,13 +402,16 @@ select {
     color: var(--brand--brand--40-d);
 }
 
-/* ||| Чекбоксы*/
-[type="checkbox"]
+/* ||| Чекбоксы и радиокнопки*/
+[type="checkbox"], [type="radio"]
 {
-    vertical-align:middle;
+    accent-color: var(--brand--brand);
 }
 
-label:has([type="checkbox"]) {
+label.medium-checkbox {
     font-size: var(--body--medium);
 }
 
+label.small-checkbox {
+    font-size: var(--body--small);
+}

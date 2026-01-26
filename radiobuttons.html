@@ -28,6 +28,31 @@
 <p class="medium-text">Каждая радиокнопка должна справа иметь лейбл, начинающийся с&nbsp;заглавной буквы. Использование в&nbsp;лейблах только заглавных и&nbsp;строчных букв не&nbsp;допускается. Длина лейбла&nbsp;&mdash; не&nbsp;более одной строки (45-70&nbsp;символов), а&nbsp;желательно 2-3&nbsp;слова.</p>
 
 <!-- Страшный интерактив-->
+<h2>Элемент</h2>
+ <section class="interactive-container" id="checkbox">
+        <form class="grid3">
+            <div class="select-container">
+                <label for="style-select">Стиль</label>
+                <div>
+                    <select name="style" id="style-select">
+                        <option selected="selected" value="medium">Medium</option>
+                        <option value="small">Small</option>
+                    </select>
+                </div>
+            </div>
+
+        </form>
+        <section class="grid3" id="element-example">
+                <label for="example" class="medium-checkbox">
+                    <input type="radio" id="example">
+                    Пример
+                </label>
+        </section>
+        
+    </section>
+
+
+
 <article class="code-container">
 <pre><code class="language-html">&lt;body&gt;
     &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
@@ -42,5 +67,6 @@
 </main>
 <script src="article.js"></script>
 <script src="showcode.js"></script>
+<script src="interactive.js"></script>
 </body>
 </html>

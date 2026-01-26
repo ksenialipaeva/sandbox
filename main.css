@@ -242,6 +242,7 @@ nav > ul{
     padding-inline-start: var(--indent-large);
     padding-inline-end: var(--indent-large);
     padding-top: var(--sidemenu);
+    text-transform: capitalize;
 }
 
 /* подзаголовки */
@@ -502,4 +503,9 @@ input[type=text]:active {
 }
 .primary-input>div>div>img, .secondary-input>div>div>img {
     height: 16px;
+}
+
+.primary-input button {
+    border:none;
+    background-color: var(--main--light);
 }
