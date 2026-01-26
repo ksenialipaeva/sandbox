@@ -1,6 +1,6 @@
 let elementExample = document.getElementById("element-example").firstElementChild;
 let sectionExample = document.getElementsByClassName("interactive-container")[0];
-let tagName = sectionExample.id;
+let tagName = sectionExample.id;//все классы созданы как название_свойства-название_элемента 
 
 let select = document.getElementById("state-select");
 let selects = document.getElementsByTagName("select");
@@ -50,12 +50,12 @@ for (let i=0; i<checkboxes.length; i++) {
         if (checkboxes[i].checked) 
         {
             parts[i].classList.remove("hide");
-            console.log("show");
+            //console.log("show");
         }
         else
         {
             parts[i].classList.add("hide");
-            console.log("hide");
+            //console.log("hide");
         }
     }
 }

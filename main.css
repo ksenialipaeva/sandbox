@@ -1,5 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 0,200..1000;
+  src: local('Nunito-VariableFont_wght'), local('Nunito'), url(fonts/Nunito/Nunito-VariableFont_wght.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 0,200..1000;
+  src: local('RobotoMono-VariableFont_wght'), local('Roboto Mono'), url(fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf) format('ttf');
+}
 
 :root {
     /* Color styles */
@@ -196,7 +207,7 @@ p.medium-text,a.medium-text, code, li, input::placeholder {
 code {
     margin-bottom:0;
 }
-p.small-text,a.small-text, li.small-text, .input-wrapper>label, .input-wrapper>span {
+p.small-text,a.small-text, li.small-text, .primary-input>label, .primary-input>span, .secondary-input>label, .secondary-input>span {
     font-size: var(--body--small);
     margin-bottom: var(--caption);
 }
@@ -459,17 +470,28 @@ input[type=text] {
 input[type=text]:active {
     outline: none;
 }
-label {
-    margin-bottom: var(--indent-x-x-small);
+
+#element-example>.primary-input, #element-example>.secondary-input {
+    width: var(--grid-2);
 }
-.input-wrapper {
+
+.primary-input, secondary-input {
     display: flex;
     flex-direction: column;
 }
-.input-wrapper>div:first-of-type {
-    border: solid black 2px;
+.primary-input>div:first-of-type {
+    border: solid var(--grey--50) 2px;
 }
-.input-wrapper>div {
+
+.secondary-input>div:first-of-type {
+    border: none;
+    background-color: var(--grey--3);
+    border-radius: 1em 1em 0 0;
+    margin-top: var(--caption)
+}
+
+
+.primary-input>div, .secondary-input>div {
     padding: var(--indent-x-x-small) var(--indent-x-x-small);
     display: flex;
     flex-direction: row;
@@ -478,6 +500,6 @@ label {
     border-radius: var(--radius-small);
     align-items: center;
 }
-.input-wrapper>div>div>img {
+.primary-input>div>div>img, .secondary-input>div>div>img {
     height: 16px;
 }
