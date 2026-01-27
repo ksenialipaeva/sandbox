@@ -43,26 +43,31 @@
 
         </form>
         <section class="grid3" id="element-example">
-                <label for="example" class="medium-checkbox">
-                    <input type="radio" id="example">
-                    Пример
-                </label>
+            <label for="example" class="medium-checkbox">
+                <input type="radio" id="example">
+                Пример
+            </label>
         </section>
         
     </section>
 
 
 
-<article class="code-container">
-<pre><code class="language-html">&lt;body&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
-&lt;/body&gt;</code></pre>
-</article>
-<pre><code class="language-css">.punctuation {    color: black;}
-.bracket {    color: blue;}
-.css .property { color:22px;}
-.css .numerical { color:seagreen;}
-.css .letter { color:cornflowerblue;}
+<h3>Код</h3>
+<h4>HTML</h4>
+<pre><code class="language-html">&lt;label for=&quot;example&quot; class=&quot;medium-checkbox&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;example&quot;&gt;
+    Пример
+&lt;/label&gt;</code></pre>
+<h4>CSS</h4>
+<pre><code class="language-css">[type=&quot;checkbox&quot;], [type=&quot;radio&quot;]{
+    accent-color: var(--brand--brand);}
+label.medium-checkbox {
+    font-size: var(--body--medium);
+}
+label.small-checkbox {
+    font-size: var(--body--small);
+}
 </code></pre>
 </main>
 <script src="article.js"></script>

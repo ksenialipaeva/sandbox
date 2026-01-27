@@ -403,15 +403,11 @@ select {
 }
 
 /* ||| Чекбоксы и радиокнопки*/
-[type="checkbox"], [type="radio"]
-{
-    accent-color: var(--brand--brand);
-}
-
+[type="checkbox"], [type="radio"]{
+    accent-color: var(--brand--brand);}
 label.medium-checkbox {
     font-size: var(--body--medium);
 }
-
 label.small-checkbox {
     font-size: var(--body--small);
 }
