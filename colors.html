@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="main.css"/>
     <link rel="stylesheet" href="instruction.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!--Подсветка синтаксиса-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/shades-of-purple.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </head>
 
 
@@ -152,12 +158,12 @@
 <h2>Градиенты</h2>
 <h3>Применения</h3>
 <p class="medium-text">Используются для фонов и&nbsp;подложек для элементов, которые должны привлекать внимание пользователя. Такие элементы должны быть достаточного размера (одно из&nbsp;измерений более 100px). На&nbsp;одном экране пользователя (то&nbsp;есть на&nbsp;высоте 1000px) не&nbsp;должно встречаться два элемента с&nbsp;градиентом, чтобы не&nbsp;создавать приоритетной путаницы.</p>
+
 <h3>Проверка контрастности</h3>
 <p class="medium-text">Для элементов на&nbsp;подложке необходимо провести две проверки контрастности по&nbsp;описанному ранее методу APCA для обоих цветов градиента. Этого будет достаточно, так как в&nbsp;линейном градиенте все светимости промежуточных оттенков попадает в&nbsp;интервал между светимостей двух крайних цветов.</p>
 <h3>Правила создания</h3>
-<p class="medium-text">Должны содержать ровно два цвета, один на&nbsp;позиции&nbsp;0%, второй на&nbsp;позиции 100%. Цвета могут быть взяты из&nbsp;семейств Grey, Brand, Accent&nbsp;1, Accent&nbsp;2, Accent&nbsp;3. Если один из&nbsp;цветов градиента из&nbsp;семейства Grey, то&nbsp;второй должен быть также оттуда, а&nbsp;остальные семейства можно сочетать друг с&nbsp;другом. Правило сочетания: два цвета должны принадлежать одной или соседним ступеням (соседними считаются, например, ступени 15L и&nbsp;50L).</p>
-<h3>Примеры</h3>
     <article class="example-container">
+        <p class="medium-text">Должны содержать ровно два цвета, один на&nbsp;позиции&nbsp;0%, второй на&nbsp;позиции 100%.</p>
         <article class="example yes grid3">
             <div>
                 <img src="images/example_yes.svg">
@@ -172,6 +178,7 @@
             </div>
             <img src="images/colors/gradient2.png">
         </article>
+
         <article class="example yes grid3">
             <div>
                 <img src="images/example_yes.svg">
@@ -179,6 +186,7 @@
             </div>
             <img src="images/colors/gradient3.png">
         </article>
+
         <article class="example no grid3">
             <div>
                 <img src="images/example_no.svg">
@@ -186,6 +194,7 @@
             </div>
             <img src="images/colors/gradient4.png">
         </article>
+        <p  class="medium-text">Цвета могут быть взяты из&nbsp;семейств Grey, Brand, Accent&nbsp;1, Accent&nbsp;2, Accent&nbsp;3. Если один из&nbsp;цветов градиента из&nbsp;семейства Grey, то&nbsp;второй должен быть также оттуда, а&nbsp;остальные семейства можно сочетать друг с&nbsp;другом. Правило сочетания: два цвета должны принадлежать одной или соседним ступеням (соседними считаются, например, ступени 15L и&nbsp;50L).</p>
         <article class="example yes grid3">
             <div>
                 <img src="images/example_yes.svg">
@@ -201,11 +210,205 @@
             <img src="images/colors/gradient6.png">
         </article>
     </article>
-<!-- Блок кода-->
-<p class="medium-text"></p>
+    <h2>Код</h2>
+    <h3>CSS</h3>
+    <pre><code class="language-css">
+:root {
+    /* Color styles */
+--main--light: rgba(246, 250, 251, 1);
+--main--dark: rgba(45, 9, 53, 1);
+
+--grey--3: rgba(240, 243, 245, 1);
+--grey--10: rgba(226, 226, 232, 1);
+--grey--20: rgba(206, 202, 212, 1);
+--grey--30: rgba(187, 177, 193, 1);
+--grey--50: rgba(147, 129, 154, 1);
+--grey--70: rgba(108, 80, 116, 1);
+--grey--90: rgba(68, 32, 77, 1);
+
+--brand--brand: rgba(172, 27, 205, 1);
+--brand--accent-1: rgba(210, 52, 131, 1);
+--brand--accent-2: rgba(27, 152, 205, 1);
+--brand--accent-3: rgba(255, 212, 0, 1);
+
+--brand--brand--40-d: rgba(96, 16, 114, 1);
+--brand--brand--50-l: rgba(209, 139, 228, 1);
+--brand--brand--70-d: rgba(134, 22, 159, 1);
+--brand--brand--20-d: rgba(70, 13, 83, 1);
+--brand--brand--15-l: rgba(235, 217, 244, 1);
+--brand--brand--5-l: rgba(242, 239, 249, 1);
+
+--brand--accent--3-5-l: rgba(246, 248, 238, 1);
+--brand--accent--3-15-l: rgba(247, 244, 213, 1);
+--brand--accent--3-50-l: rgba(251, 231, 126, 1);
+--brand--accent--3-70-d: rgba(192, 151, 16, 1);
+--brand--accent--3-40-d: rgba(150, 111, 26, 1);
+--brand--accent--3-20--d: rgba(87, 50, 42, 1);
+
+--brand--accent--2-20-d: rgba(41, 38, 83, 1);
+--brand--accent--2-40-d: rgba(38, 66, 114, 1);
+--brand--accent--2-70-d: rgba(32, 109, 159, 1);
+--brand--accent--2-50-l: rgba(137, 201, 228, 1);
+--brand--accent--2-15-l: rgba(213, 235, 244, 1);
+--brand--accent--2-5-l: rgba(235, 245, 249, 1);
+
+--brand--accent--1-20-d: rgba(78, 18, 69, 1);
+--brand--accent--1-40-d: rgba(111, 26, 84, 1);
+--brand--accent--1-70-d: rgba(160, 39, 108, 1);
+--brand--accent--1-50-l: rgba(228, 151, 191, 1);
+--brand--accent--1-15-l: rgba(241, 220, 233, 1);
+--brand--accent--1-5-l: rgba(244, 240, 245, 1);
+
+--feedback--danger--light: rgba(243, 204, 204, 1);
+--feedback--danger--medium: rgba(235, 32, 35, 1);
+--feedback--danger--dark: rgba(148, 15, 17, 1);
+
+--feedback--warning--light: rgba(246, 239, 185, 1);
+--feedback--warning--medium: rgba(255, 227, 28, 1);
+--feedback--warning--dark: rgba(156, 138, 12, 1);
+
+--feedback--success--light: rgba(192, 236, 188, 1);
+--feedback--success--medium: rgba(67, 208, 55, 1);
+--feedback--success--dark: rgba(43, 130, 35, 1);
+
+--link--link: rgba(48, 39, 221, 1);
+--link--hover: rgba(45, 39, 169, 1);
+--link--active: rgba(20, 17, 86, 1);
+--link--visited: rgba(110, 35, 138, 1);
+}
+    </code></pre>
+    <h3>JS</h3>
+    <pre><code class="language-js">
+let colorMixStr = [&quot;color-mix(in lab, var(&quot;,&quot;)&quot;];
+
+function colorMixCSS (c1,c2,p1) {
+    p1-=3;
+    let p2=100-p1;
+    return (colorMixStr[0]+c1+&quot;) &quot;+p1+&quot;%, var(&quot;+c2+&quot;) &quot;+colorMixStr[1]);
+}
+//colorsContainer[0].style.backgroundColor = colorMixCSS(&quot;--main--dark&quot;,&quot;--main--light&quot;,50);
+
+let colorsContainer = document.getElementsByClassName(&quot;colors-container&quot;);
+
+
+//создаем карточку цвета
+function createColorCard (name, hex, base) {
+    let colorBlock = document.createElement(&apos;li&apos;);
+    let colorShow = document.createElement(&apos;div&apos;);
+    colorShow.style.backgroundColor = &quot;#&quot;+ hex;
+    let colorName = document.createElement(&apos;span&apos;);
+    colorName.textContent = name;
+    let colorHEX = document.createElement(&apos;span&apos;);
+    colorHEX.textContent = &quot;#&quot;+ hex;
+
+
+    if (base)    {
+        let spanBase = document.createElement(&apos;span&apos;);
+        spanBase.textContent = &quot;B&quot;;
+        colorShow.append(spanBase);
+    }
+
+    colorBlock.append(colorShow);
+    colorBlock.append(colorName);
+    colorBlock.append(colorHEX);
+
+    let copied = &quot;#&quot;+ hex;
+    colorBlock.addEventListener(&apos;click&apos;, listenerCopy(colorBlock,copied,colorShow,&apos;&lt;img src=&quot;images/icons/copy.svg&quot;&gt;&apos;));
+
+    return colorBlock;
+}
+
+function hextorgb (hex) {
+    let rgb=[];
+    rgb.push(parseInt(hex.substr(0,2), 16));
+    rgb.push(parseInt(hex.substr(2,2), 16));
+    rgb.push(parseInt(hex.substr(4,2), 16));
+    //console.log(rgb);
+    return(rgb);
+}
+
+function baseMix (c_trans,c_base,p) {
+    let percent = p/100;
+    let mix10 = c_trans*percent+c_base*(1-percent);
+    let mix16 = ((Math.floor(mix10)).toString(16));
+    while (mix16.length &lt; 2) mix16=0+mix16;
+    return mix16;
+}
+
+function rgbMix (c1,c2,p) {
+    let rgb=[];
+    rgb.push(baseMix(c1[0],c2[0],p));
+    rgb.push(baseMix(c1[1],c2[1],p));
+    rgb.push(baseMix(c1[2],c2[2],p));
+    //console.log(rgb[0]+rgb[1]+rgb[2]);
+    return (rgb[0]+rgb[1]+rgb[2]);
+}
+
+let colorLight = &quot;F6FAFB&quot;;
+let colorDark = &quot;300739&quot;;
+let colorBrand = [&quot;AC1BCD&quot;,&quot;1B98CD&quot;,&quot;FFD400&quot;,&quot;D23483&quot;];
+
+let colors = [
+    [&quot;main&quot;,[[&quot;light&quot;,colorLight,true],[&quot;dark&quot;,colorDark,true]]],
+    [&quot;grays&quot;,[]],
+    [&quot;brand&quot;,[]],
+    [&quot;brand1&quot;,[]],
+    [&quot;brand2&quot;,[]],
+    [&quot;brand3&quot;,[]],
+    [&quot;success&quot;,[[&quot;success light&quot;,&quot;C0ECBC&quot;,true],[&quot;success medium&quot;,&quot;43D037&quot;,true],[&quot;success dark&quot;,&quot;2B8223&quot;,true]]],
+    [&quot;warning&quot;,[[&quot;warning light&quot;,&quot;F6EFB9&quot;,true],[&quot;warning medium&quot;,&quot;FFE31C&quot;,true],[&quot;warning dark&quot;,&quot;9C8A0C&quot;,true]]],
+    [&quot;danger&quot;,[[&quot;danger light&quot;,&quot;F3CCCC&quot;,true],[&quot;danger medium&quot;,&quot;EB2023&quot;,true],[&quot;danger dark&quot;,&quot;940F11&quot;,true]]],
+    [&quot;link&quot;,[[&quot;link&quot;,&quot;3027DD&quot;,true],[&quot;link hover&quot;,&quot;2B24A3&quot;,true],[&quot;link active&quot;,&quot;141156&quot;,true],[&quot;link visited&quot;,&quot;6E238A&quot;,true]]],
+    
+]
+
+let grays = [[90,false],[70,false],[50,true],[30,false],[20,false],[10,true],[3,true]];
+let brand = [[[&quot;brand&quot;],[[5,false],[15,false],[50,true]],[[70,false],[40,true],[20,false]]],
+            [[&quot;brand1&quot;],[[5,false],[15,false],[50,false]],[[70,false],[40,false],[20,false]]],
+            [[&quot;brand2&quot;],[[5,false],[15,false],[50,false]],[[70,false],[40,false],[20,false]]],
+            [[&quot;brand3&quot;],[[5,false],[15,false],[50,false]],[[70,false],[40,false],[20,false]]]];
+
+
+//вставляем в массив серые
+for (let i=0; i&lt;grays.length; i++) {
+    let hex = rgbMix(hextorgb(colorDark),hextorgb(colorLight),grays[i][0]);
+    colors[1][1].push([grays[i][0],hex,grays[i][1]]);
+}
+
+
+//вставляем в массив брендовые
+for (let j=0;j&lt;brand.length;j++){
+
+    for (let i =0;i&lt;brand[j][1].length;i++) {
+        let name = brand[j][0] + &quot; &quot; + brand[j][1][i][0] + &quot;L&quot;;
+        let hex = rgbMix(hextorgb(colorBrand[j]),hextorgb(colorLight),brand[j][1][i][0]);
+        colors[2+j][1].push([name,hex,brand[j][1][i][1]]);
+    }
+
+    colors[2+j][1].push([brand[j][0],colorBrand[j],true]);
+
+    for (let i =0;i&lt;brand[j][2].length;i++) {
+        let name = brand[j][0] + &quot; &quot; + brand[j][2][i][0] + &quot;D&quot;;
+        let hex = rgbMix(hextorgb(colorBrand[j]),hextorgb(colorDark),brand[j][2][i][0]);
+        colors[2+j][1].push([name,hex,brand[j][2][i][1]]);
+    }
+}
+
+
+//вставляем все цвета на страницу
+for (let i=0;i&lt;colors.length;i++) {
+    let place = colorsContainer[i];
+    for (let j =0;j&lt;colors[i][1].length;j++) {
+        let c = createColorCard(colors[i][1][j][0],colors[i][1][j][1],colors[i][1][j][2]);
+        place.append(c);
+    }
+}
+
+    </code></pre>
 </main>
 <script src="article.js"></script>
 <script src="showcode.js"></script>
 <script src="colors.js"></script>
+<script src="table_of_content.js"></script>
 </body>
 </html>

@@ -121,19 +121,182 @@
         </ul-->
     </section>
     
-<article class="code-container">
-<pre><code class="language-html">&lt;body&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
-&lt;/body&gt;</code></pre>
-</article>
-<article class="code-container">
-<pre><code class="language-css">.punctuation {    color: black;}
-.bracket {    color: blue;}
-.css .property { color:22px;}
-.css .numerical { color:seagreen;}
-.css .letter { color:cornflowerblue;}
+<h2>Элемент</h2>
+<h3>HTML</h3>
+<pre><code class="language-html">&lt;button class=&quot;medium-button primary-button
+        icon-left-button icon-right-button&quot;&gt;
+    &lt;img class=&quot;toggle&quot; src=&apos;images/icons/copy.svg&apos;&gt; 
+    &lt;span class=&quot;toggle&quot;&gt;Кнопка&lt;/span&gt;
+    &lt;img class=&quot;toggle&quot; src=&apos;images/icons/copy.svg&apos;&gt; 
+&lt;/button&gt;</code></pre>
+<h3>CSS</h3>
+<pre><code class="language-css">/*||| Кнопки */
+
+button {
+    display: flex;
+    align-items: center;
+}
+button:hover, button:active {
+    cursor: pointer;
+}
+.select-container {
+    display: flex;
+    flex-direction: column;
+    margin: var(--indent-x-x-small) var(--indent-x-x-small);
+}
+.select-container label {
+    margin-left: var(--indent-medium);
+}
+.select-container div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.select-container button {
+    width: min-content;
+}
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    width: 100%;
+    font-size: var(--body--medium);
+    background-color: var(--main--light);
+    padding-right: 15px;
+    background-image: url(&apos;data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;20&quot; height=&quot;15&quot; viewBox=&quot;0 0 15 15&quot;&gt;&lt;path d=&quot;M 8,5.5 11,9.5 14,5.5 z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&apos;);
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+/*Размеры*/
+
+/*Размеры общие*/
+.large-button {
+    padding: var(--indent-x-small) var(--indent-medium);
+    border-radius: var(--radius-large);
+    font-size: var(--body--large);
+    border-width: 2.5px;
+}
+.medium-button, .select-container div {
+    padding: var(--indent-x-x-small) var(--indent-small);
+    border-radius: var(--radius-small);
+    font-size: var(--body--medium);
+    border-width: 2.25px;
+} 
+
+.small-button {
+    padding: var(--indent-x-x-x-small) var(--indent-x-x-small);
+    border-radius: var(--radius-extrasmall);
+    font-size: var(--body--small);
+    border-width: 2px;
+}
+
+/*Размеры кнопок с иконками*/
+.large-button img {
+    height: var(--body--large);
+    stroke-width: 10px;
+}
+.medium-button img, .select-container&gt;div&gt;img {
+    height: var(--body--medium);
+}
+.small-button img {
+    height: var(--body--small);
+}
+
+.large-button.icon-left-button, .large-button.icon-both-button {
+    padding-left: var(--indent-x-small);
+    gap: var(--indent-x-x-small);
+}
+.large-button.icon-right-button, .large-button.icon-both-button {
+    padding-right: var(--indent-x-small);
+    gap: var(--indent-x-x-small);
+}
+.large-button.icon-only-button {
+    padding: var(--indent-small);
+}
+
+.medium-button.icon-left-button, .medium-button.icon-both-button, .select-container.icon-left-select div  {
+    padding-left: var(--indent-x-x-small);
+    gap: var(--indent-x-x-x-small);
+}
+.medium-button.icon-right-button, .medium-button.icon-both-button {
+    padding-right: var(--indent-x-x-small);
+    gap: var(--indent-x-x-x-small);
+}
+.medium-button.icon-only-button {
+    padding: var(--indent-x-small);
+}
+
+.small-button.icon-left-button, .small-button.icon-both-button {
+    padding-left: var(--indent-x-x-x-small);
+    gap: var(--indent-x-x-x-small);
+}
+.small-button.icon-right-button, .small-button.icon-both-button {
+    padding-right: var(--indent-x-x-x-small);
+    gap: var(--indent-x-x-x-small);
+}
+.small-button.icon-only-button {
+    padding: var(--indent-x-x-small);
+}
+
+/*Стили*/
+.primary-button {
+    background-color: var(--brand--brand);
+    border: none;
+    color: var(--main--light);
+}
+
+.primary-button:hover {    background-color: var(--brand--brand--70-d);}
+.primary-button:active {    background-color: var(--brand--brand--40-d);}
+
+.secondary-button, .select-container div {
+    background-color:transparent;
+    border-style: solid;
+    border-color: var(--brand--brand);
+    color: var(--brand--brand);
+}
+.secondary-button img, .select-container img {
+    filter: invert(0.7) sepia(1) saturate(5) hue-rotate(245deg);
+}
+
+.secondary-button:hover img {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(230deg) brightness(0.6);
+}
+.secondary-button:active img {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(230deg) brightness(0.4);
+}
+.secondary-button:hover, .select-container:hover div {    
+    border-color: var(--brand--brand--70-d);
+    color: var(--brand--brand--70-d);
+}
+.secondary-button:active, .select-container:active div {    
+    border-color: var(--brand--brand--40-d);
+    color: var(--brand--brand--40-d);
+}
+
+.empty-button, .input-wrapper button {
+    background-color:transparent;
+    border: none;
+    color: var(--brand--brand)
+}
+.empty-button img {
+    filter: invert(0.7) sepia(1) saturate(5) hue-rotate(245deg);
+}
+
+.empty-button:hover img {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(230deg) brightness(0.6);
+}
+.empty-button:active img {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(230deg) brightness(0.4);
+}
+.empty-button:hover, .input-wrapper button:hover {
+    color: var(--brand--brand--70-d);
+}
+.empty-button:active, .input-wrapper button:active {
+    color: var(--brand--brand--40-d);
+}
 </code></pre>
-</article>
 
 
 </main>
@@ -141,5 +304,6 @@
 <script src="article.js"></script>
 <script src="showcode.js"></script>
 <script src="interactive.js"></script>
+<script src="table_of_content.js"></script>
 </body>
 </html>

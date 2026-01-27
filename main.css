@@ -256,6 +256,8 @@ nav > ul{
     list-style-type: none;
     background-color: var(--main--light);
     z-index: 100;
+    flex-wrap:wrap;
+
 }
 .content_table li {
     margin:0;
@@ -264,12 +266,19 @@ nav > ul{
 .content_table a {
     text-decoration: none;
     color: var(--grey--50);
+    width:max-content;
+    white-space: nowrap;
+    padding: 0 var(--indent-small);
+}
+.content_table a:hover {
+    color: var(--grey--70);
 }
 .content_table a:visited {
     color: var(--grey--50);
 }
 .content_table a.active {
-    background-color: antiquewhite;
+    font-weight: 700;
+    color: var(--grey--70);
 }
 /* подзаголовки */
 .side-menu-heading, aside > nav > ul > li{
