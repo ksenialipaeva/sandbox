@@ -557,3 +557,12 @@ input::placeholder, input {
 .secondary-input label, .secondary-input span{
     color: var(--grey--50);
 }
+
+.typo-table {
+    display: flex;
+    flex-direction: row;
+}
+.typo-table:first-child {
+    width: var(--grid-6);
+    background-color: var(--grey--3);
+}
